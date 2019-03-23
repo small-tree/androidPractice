@@ -5,6 +5,7 @@ import android.app.job.JobService
 import android.content.Intent
 import android.content.res.Configuration
 import android.os.Build
+import android.os.Handler
 import android.support.annotation.RequiresApi
 import android.util.Log
 import xianchao.com.practice.LOG_TAG
@@ -18,12 +19,24 @@ class PracticeJobService : JobService {
 
     override fun onStopJob(params: JobParameters?): Boolean {
         Log.d(LOG_TAG, "onStopJob() called with: params = [" + params + "]")
+
+        consoleLog("onStopJob->>")
         return true
     }
 
     override fun onStartJob(params: JobParameters?): Boolean {
         Log.d(LOG_TAG, "onStartJob() called with: params = [" + params + "]");
-        return true
+
+
+        consoleLog("onStartJob.....")
+        consoleLog("param->>" + params!!.extras.getString(JOB_SERVICE_MSG))
+        consoleLog("duration->>" + params!!.extras.getLong(JOB_SERVICE_DUIATION))
+
+        Handler().postDelayed({
+            jobFinished(params, false)
+        }, params!!.extras.getLong(JOB_SERVICE_DUIATION))
+
+        return false
     }
 
 
