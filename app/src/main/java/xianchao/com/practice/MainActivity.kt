@@ -34,25 +34,5 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-
-    }
-
-    var handler = object : android.os.Handler() {
-        override fun handleMessage(msg: Message?) {
-            super.handleMessage(msg)
-        }
-    }
-
-    override fun onStart() {
-        super.onStart()
-        val messenger = Messenger(handler)
-        val intent = Intent(this, PracticeJobService::class.java)
-        intent.putExtra("AAAAAAAA", messenger)
-        startService(intent)
-    }
-
-    override fun onStop() {
-        super.onStop()
-        stopService(Intent(this, PracticeJobService::class.java))
     }
 }

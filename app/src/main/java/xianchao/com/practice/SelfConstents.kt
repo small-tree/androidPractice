@@ -1,3 +1,3 @@
 package xianchao.com.practice
 
-const val LOG_TAG = ""
+const val LOG_TAG = "log-practice"

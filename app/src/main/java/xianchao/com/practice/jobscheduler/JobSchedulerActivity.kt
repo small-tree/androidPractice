@@ -12,6 +12,8 @@ import android.os.PersistableBundle
 import android.util.Log
 import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_job_scheduler.*
+import xianchao.com.basiclib.utils.checkIsEmpty
+import xianchao.com.basiclib.utils.checkNotEmpty
 import xianchao.com.practice.R
 
 const val JOB_SERVICE_DUIATION = "JOB_SERVICE_DUIATION"
@@ -58,7 +60,9 @@ class JobSchedulerActivity : AppCompatActivity() {
         builder.setMinimumLatency(2000L)
         builder.setOverrideDeadline(2000L)
         val bundle = PersistableBundle()
-        bundle.putLong(JOB_SERVICE_DUIATION, 2000)
+        if (et_duration.text.toString().checkNotEmpty()) {
+            bundle.putLong(JOB_SERVICE_DUIATION, et_duration.text.toString().toLong())
+        }
         bundle.putString(JOB_SERVICE_MSG, "这是参数")
         builder.setExtras(bundle)
 
