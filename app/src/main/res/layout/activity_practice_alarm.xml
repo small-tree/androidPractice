@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".alarmManager.PracticeAlarmActivity">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="延迟执行时间 s"
+        android:inputType="number"
+        android:id="@+id/et_delay"
+        />
+
+
+    <Button
+        android:id="@+id/btn_task"
+        app:layout_constraintTop_toBottomOf="@+id/et_delay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ETC 启动一个延迟任务"
+        />
+
+    <Button
+        android:id="@+id/btn_wakeup_task"
+        app:layout_constraintTop_toBottomOf="@+id/btn_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ETC_WAKEUP 启动一个延迟任务"
+        />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="200dp">
+
+        <TextView
+            android:id="@+id/tv_console"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

@@ -9,6 +9,7 @@ import android.os.Handler
 import android.support.annotation.RequiresApi
 import android.util.Log
 import xianchao.com.practice.LOG_TAG
+import xianchao.com.practice.jobscheduler.JobSchedulerActivity.Companion.consoleLog
 import java.io.FileDescriptor
 import java.io.PrintWriter
 
@@ -20,7 +21,7 @@ class PracticeJobService : JobService {
     override fun onStopJob(params: JobParameters?): Boolean {
         Log.d(LOG_TAG, "onStopJob() called with: params = [" + params + "]")
 
-        consoleLog("onStopJob->>")
+        JobSchedulerActivity.consoleLog("onStopJob->>")
         return true
     }
 

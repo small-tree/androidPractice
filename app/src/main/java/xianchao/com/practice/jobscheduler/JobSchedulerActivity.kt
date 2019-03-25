@@ -20,17 +20,17 @@ const val JOB_SERVICE_DUIATION = "JOB_SERVICE_DUIATION"
 const val JOB_SERVICE_MSG = "JOB_SERVICE_MSG"
 
 
-fun consoleLog(msg: String) {
-    if (JobSchedulerActivity.tvConsole != null) {
-        JobSchedulerActivity.tvConsole!!.text = JobSchedulerActivity.tvConsole!!.text.toString() + "\\\n" + msg
-    }
-}
-
 class JobSchedulerActivity : AppCompatActivity() {
 
 
     companion object {
         var tvConsole: TextView? = null
+        fun consoleLog(msg: String) {
+            if (JobSchedulerActivity.tvConsole != null) {
+                JobSchedulerActivity.tvConsole!!.text = JobSchedulerActivity.tvConsole!!.text.toString() + "\\\n" + msg
+            }
+        }
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

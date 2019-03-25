@@ -3,9 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="xianchao.com.practice">
 
+    <uses-permission
+        android:name="android.permission.BIND_JOB_SERVICE"
+        tools:ignore="ProtectedPermissions" />
 
-    <uses-permission android:name="android.permission.BIND_JOB_SERVICE"
-        tools:ignore="ProtectedPermissions"></uses-permission>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,11 +21,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".jobscheduler.JobSchedulerActivity"></activity>
+        <activity android:name=".jobscheduler.JobSchedulerActivity" />
 
-        <service android:name=".jobscheduler.PracticeJobService"
-            android:permission="android.permission.BIND_JOB_SERVICE"
-            />
+        <service
+            android:name=".jobscheduler.PracticeJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <activity android:name=".alarmManager.PracticeAlarmActivity"></activity>
+
+
+
+        <receiver android:name=".alarmManager.AlarmEventReceiver">
+            <intent-filter>
+                <action android:name="self_borad_cast"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
