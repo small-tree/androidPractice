@@ -36,12 +36,15 @@ class WorkManagerActivity : AppCompatActivity() {
         btn_start_work.setOnClickListener {
 
             val inputdata = Data.Builder().putString(WORKER_USERINFO, "xianchao|男").build()
+
             val build = OneTimeWorkRequest
                     .Builder(AnalysisWorker::class.java)
                     .setInputData(inputdata)
                     .build()
+
             consoleLog("create OneTimeWorkRequest")
             consoleLog("work enqueue")
+
             WorkManager.getInstance().getStatusById(build.getId())//通过workRequest的id获取
                     .observe(this, object : Observer<WorkStatus> {
                         override fun onChanged(t: WorkStatus?) {
@@ -53,6 +56,10 @@ class WorkManagerActivity : AppCompatActivity() {
                     })
 
             WorkManager.getInstance().enqueue(build)
+//            var workContinuation1 = WorkManager.getInstance().beginWith(work1)
+//            var workContinuation2 = WorkManager.getInstance().beginWith(work2)
+//            WorkContinuation.combine(workContinuation1,workContinuation2)
+
         }
 
     }

@@ -15,6 +15,8 @@ import android.os.Messenger
 import android.support.annotation.RequiresApi
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
+import android.view.View
+import android.view.ViewGroup
 import android.widget.PopupWindow
 import kotlinx.android.synthetic.main.activity_main.*
 import xianchao.com.basiclib.extension.extStartActivity
@@ -24,6 +26,20 @@ import xianchao.com.practice.jobscheduler.PracticeJobService
 import xianchao.com.practice.workmanager.WorkManagerActivity
 import java.util.logging.Handler
 import java.util.logging.LogManager
+
+
+class WithParentClickListener(val onClickListener: View.OnClickListener) : View.OnClickListener {
+
+    override fun onClick(v: View) {
+        onClickListener.onClick(v)
+        (v.parent as ViewGroup).callOnClick()
+    }
+}
+
+fun View.setWithParentClickListener(onClickListener: View.OnClickListener) {
+    this.setOnClickListener(WithParentClickListener(onClickListener))
+
+}
 
 class MainActivity : AppCompatActivity() {
 

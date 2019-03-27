@@ -16,7 +16,6 @@ const val WORKER_RESULT = "WORKER_RESULT"
 class AnalysisWorker : Worker {
 
     constructor() : super()
-    lateinit var a :View
 
     override fun doWork(): WorkerResult {
 
