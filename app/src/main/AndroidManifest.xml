@@ -27,15 +27,15 @@
             android:name=".jobscheduler.PracticeJobService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
-        <activity android:name=".alarmManager.PracticeAlarmActivity"></activity>
-
-
+        <activity android:name=".alarmManager.PracticeAlarmActivity" />
 
         <receiver android:name=".alarmManager.AlarmEventReceiver">
             <intent-filter>
-                <action android:name="self_borad_cast"/>
+                <action android:name="self_borad_cast" />
             </intent-filter>
         </receiver>
+
+        <activity android:name=".workmanager.WorkManagerActivity"></activity>
     </application>
 
 </manifest>

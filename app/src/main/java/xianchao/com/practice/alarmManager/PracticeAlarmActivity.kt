@@ -82,7 +82,7 @@ class PracticeAlarmActivity : AppCompatActivity() {
             intent.putExtras(BundleUtils.createWith("msg", "msg"))
 
             val broadcast = PendingIntent.getBroadcast(this, 100, intent, PendingIntent.FLAG_UPDATE_CURRENT)
-
+            broadcast.send()
             consoleLog("AlarmManager create...")
 
             if (et_delay.text.toString().checkIsEmpty()) {

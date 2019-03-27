@@ -23,5 +23,11 @@
         android:layout_height="wrap_content"
         android:text="AlarmManager"
         android:textAllCaps="false" />
+    <Button
+        android:id="@+id/btn_workManager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WorkManager"
+        android:textAllCaps="false" />
 
 </LinearLayout>
