@@ -23,6 +23,7 @@ import xianchao.com.basiclib.extension.extStartActivity
 import xianchao.com.practice.alarmManager.PracticeAlarmActivity
 import xianchao.com.practice.jobscheduler.JobSchedulerActivity
 import xianchao.com.practice.jobscheduler.PracticeJobService
+import xianchao.com.practice.socket.SocketPracticeActivity
 import xianchao.com.practice.workmanager.WorkManagerActivity
 import java.util.logging.Handler
 import java.util.logging.LogManager
@@ -61,6 +62,10 @@ class MainActivity : AppCompatActivity() {
 
         btn_workManager.setOnClickListener {
             extStartActivity(WorkManagerActivity::class.java)
+        }
+
+        btn_socket.setOnClickListener {
+            extStartActivity(SocketPracticeActivity::class.java)
         }
 
 

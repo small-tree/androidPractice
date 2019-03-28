@@ -29,5 +29,11 @@
         android:layout_height="wrap_content"
         android:text="WorkManager"
         android:textAllCaps="false" />
+    <Button
+        android:id="@+id/btn_socket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="socket"
+        android:textAllCaps="false" />
 
 </LinearLayout>
