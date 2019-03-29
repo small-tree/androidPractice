@@ -35,5 +35,11 @@
         android:layout_height="wrap_content"
         android:text="socket"
         android:textAllCaps="false" />
+    <Button
+        android:id="@+id/btn_ArchitectureComponents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ArchitectureComponents"
+        android:textAllCaps="false" />
 
 </LinearLayout>

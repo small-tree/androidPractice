@@ -20,6 +20,7 @@ import android.view.ViewGroup
 import android.widget.PopupWindow
 import kotlinx.android.synthetic.main.activity_main.*
 import xianchao.com.basiclib.extension.extStartActivity
+import xianchao.com.practice.ArchitectureComponents.ArchitecturePracticeActivity
 import xianchao.com.practice.alarmManager.PracticeAlarmActivity
 import xianchao.com.practice.jobscheduler.JobSchedulerActivity
 import xianchao.com.practice.jobscheduler.PracticeJobService
@@ -66,6 +67,10 @@ class MainActivity : AppCompatActivity() {
 
         btn_socket.setOnClickListener {
             extStartActivity(SocketPracticeActivity::class.java)
+        }
+
+        btn_ArchitectureComponents.setOnClickListener {
+            extStartActivity(ArchitecturePracticeActivity::class.java)
         }
 
 
