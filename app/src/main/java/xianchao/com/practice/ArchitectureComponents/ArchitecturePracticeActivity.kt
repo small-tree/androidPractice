@@ -11,6 +11,7 @@ import xianchao.com.practice.ArchitectureComponents.liveData.PageViewModel
 import xianchao.com.practice.ArchitectureComponents.liveData.createPageViewData
 import xianchao.com.practice.MainActivity
 import xianchao.com.practice.R
+import java.lang.RuntimeException
 import java.util.*
 
 class ArchitecturePracticeActivity : AppCompatActivity() {

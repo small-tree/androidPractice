@@ -1,10 +1,8 @@
 package xianchao.com.practice
 
-import android.util.Log
 import org.junit.Test
 
 import org.junit.Assert.*
-import kotlin.math.log2
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -12,8 +10,17 @@ import kotlin.math.log2
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 class ExampleUnitTest {
+
+    var intArray = arrayOf(3,4,2,1,5,3,6,1)
+
     @Test
     fun addition_isCorrect() {
+        TestJavaCode.test()
         assertEquals(4, 2 + 2)
+
+
+        ArraySort.bubbleSort(intArray)
     }
+
+
 }
