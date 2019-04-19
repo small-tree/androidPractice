@@ -11,15 +11,17 @@ import org.junit.Assert.*
  */
 class ExampleUnitTest {
 
-    var intArray = arrayOf(3,4,2,1,5,3,6,1)
+    var intArray = arrayOf(3, 4, 2, 1, 5, 3, 6, 1)
 
     @Test
     fun addition_isCorrect() {
-        TestJavaCode.test()
+//        TestJavaCode.test()
         assertEquals(4, 2 + 2)
+//        TestJavaCode.quitSort(intArray.toIntArray(), 0, intArray.size-1)
 
+        ArraySort.quickSork(intArray)
 
-        ArraySort.bubbleSort(intArray)
+//        ArraySort.bubbleSort(intArray)
     }
 
 

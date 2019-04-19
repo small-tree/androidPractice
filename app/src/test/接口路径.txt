@@ -1,0 +1,1114 @@
+
+ //测试test
+ public static String BASE_URL = "http://test-user.ipaye.cn/yunpay_v2/api/v2";// 正式
+ public static String BASE_URL_FAN = "http://test-user.ipaye.cn/yunpay_cc";//正式
+ public static String BASE_URL_UPLOAD = "http://test-user.ipaye.cn/yunpay_static/api/v2";//  正式
+ public static String BASE_URL_MERCHANT = "http://test-user.ipaye.cn/yunpay_credit/api/v2";//云商正式
+ public static String BASE_URL_REDBAG = "http://test-user.ipaye.cn/yunpay_red";// 群红包服务器正式
+ public static String BASE_URL_UPLOAD_GROUP = "http://test-user.ipaye.cn/yunpay_static/commons/chatgroup/";// 群头像服务器正式
+ public static String BASE_URL_RES = "http://test-user.ipaye.cn/yunpay_static";//  图片加载前缀 ststic
+
+ //提交实名审核
+ public static String SUBMIT_USER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/app/user/submitUser";
+
+ //优惠券相关
+ //	我的 		获取未使用优惠券列表
+ public static String GET_USER_COUPON_UNUSED_LIST = "http://test-user.ipaye.cn/yunpay_v2/api/v2/app/coupon/getUserCouponUnusedList";
+ //	我的 		获取可用优惠券列表(付款给商户时)
+ public static String GET_USER_COUPON_USED_LIST = "http://test-user.ipaye.cn/yunpay_v2/api/v2/app/coupon/getUserCouponUsedList";
+ //	我的 		获取用户优惠券详情
+ public static String GET_USER_COUPON_DETAIL = "http://test-user.ipaye.cn/yunpay_v2/api/v2/app/coupon/getUserCouponDetail";
+ //	我的 	获取商家优惠券列表
+ public static String GET_MERCHANT_COUPON_LIST_WITH_MNUM = "http://test-user.ipaye.cn/yunpay_v2/api/v2/app/coupon/getMerchantCouponListWithmNum";
+
+ //	通过余额发红包给好友   添加支付订单(发红包时)
+ public static String ADD_REDBAG = "http://test-user.ipaye.cn/yunpay_v2/api/v2/redbag/add";
+
+
+ //	红包 	处理支付订单(收红包)
+ public static String RECEIVE_REDBAG = "http://test-user.ipaye.cn/yunpay_v2/api/v2/redbag/receive";
+
+ //	红包 	获取红包详情
+ public static String GET_RED_BAG_DETAIL = "http://test-user.ipaye.cn/yunpay_v2/api/v2/redbag/getDetail";
+
+
+ //	付成功回调
+ public static String GET_RESULT_FROM = "getResultFrom";
+
+
+ //	获取推荐人云币收益
+ public static String GET_COUNT_PROFIT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/app/bill/countProfit";
+
+
+ //分享红包
+ //	展示已分享过的红包列表
+ public static String LIST_SHARED_RED_BAG = "http://test-user.ipaye.cn/yunpay_v2/api/v2/app/redbag/listSharedRedbag";
+ //	添加分享红包   添加支付订单(发红包时)
+ public static String ADD_RED_BAG = "http://test-user.ipaye.cn/yunpay_v2/api/v2/app/redbag/addRedbag";
+ //	添加分享红包   随机或平均分配好的红包详情列表
+ public static String LIST_DO_FINISH_RED_BAG = "http://test-user.ipaye.cn/yunpay_v2/api/v2/app/redbag/listDofinishRedbag";
+ //	添加分享红包   获取分享红包的url
+ public static String GET_SHARE_URL = "http://test-user.ipaye.cn/yunpay_v2/api/v2/app/common/getShareUrl";
+ //	获取转账说明规则
+ public static String GET_TRANSFER_STATE = "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/getTransferState";
+ //	添加分享红包   用户领取红包状态
+ public static String VALIDATE_RED_BAG = "http://test-user.ipaye.cn/yunpay_v2/api/v2/app/redbag/validateRedBag";
+
+
+ //	银行卡 是否可以绑定对公账户
+ public static String IS_BIND_BUSINESS = "http://test-user.ipaye.cn/yunpay_v2/api/v2/app/bank/isBindBusiness";
+
+
+ //用户
+ //用户登录
+ public static String LOGIN_USER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/user/login";
+ //检查用户是否存在 , 存在返回用户是否实名数据
+ public static String ISLOGINNAMEEXISTBYUSERINFO_USER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/user/isLoginNameExistByUserInfo";
+
+
+ //环境验证 重发手机短信验证码
+ public static String SENDEVNCODE_SMS = "http://test-user.ipaye.cn/yunpay_v2/api/v2/sms/sendEvnCode";
+ //个推参数
+ public static String UPDATE_PUSH_TOKEN_USER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/user/updatePushToken";
+ //用户注册
+ public static String REGIST_USER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/user/regist";
+ //用户注册 添加子账号
+ public static String REGIST_CHILD_USER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/user/registChild";
+ //	验证用户是否正确
+ public static String IS_USER_CORRECT_USER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/user/isUserCorrect";
+ //修改密码(未登录)
+ public static String RESET_PASSWORD_BY_SMS_USER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/user/resetPasswordBySms";
+ //	修改登录密码(通过旧登录密码)
+ public static String RESET_PASSWORD_BY_OLD_USER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/user/resetPasswordByOld";
+ //		设置支付密码
+ public static String ADD_PAY_PWD_USER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/user/addPayPwd";
+ //	修改支付密码(通过旧支付密码)
+ public static String RESET_PAY_PWD_BY_OLD_USER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/user/resetPayPwdByOld";
+ //	忘记支付密码  	修改支付密码(短信验证)
+ public static String RESET_PAY_PWD_BY_SMS_USER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/user/resetPayPwdBySms";
+ //	忘记支付密码  	修改支付密码(短信验证,身份证后6位)
+ public static String RESET_PAY_PWD_BY_SMS_AND_IDENTITY_USER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/user/resetPayPwdBySmsAndIdentity";
+
+ //修改用户手机时，发送短信验证码到旧手机
+ public static String SEND_WHEN_REMOBILE_OLD_SMS = "http://test-user.ipaye.cn/yunpay_v2/api/v2/sms/sendWhenRemobileOld";
+ //		//验证短信 验证码是否正确
+	public static String IS_SMS_CORRECT_SMS = BASE_URL  + "/sms/isSmsCorrect";
+ //修改用户手机时，发送短信验证码到新手机
+ public static String SEND_WHEN_REMOBILE_NEW_SMS = "http://test-user.ipaye.cn/yunpay_v2/api/v2/sms/sendWhenRemobileNew";
+ //验证支付密码是否正确
+ public static String IS_PAYPWD_CORRECT_USER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/user/isPaypwdCorrect";
+ //修改用户手机
+ public static String RESET_MOBILE_USER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/user/resetMobile";
+ //获取设备信息
+ public static String RESET_GET_DEVICEINFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/user/getDeviceInfo";
+ //删除用户设备已登录设备相关信息
+ public static String RESET_DELETE_DEVICEINFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/user/deleteDeviceInfo";
+ //设备开关
+ public static String EDIT_DEVICE_SWITCH = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/editDeviceSwitch";
+ //更新用户当前位置信息
+ public static String UPDATE_USER_LOCATION = "http://test-user.ipaye.cn/yunpay_v2/api/v2/user/updateUserLocation";
+
+
+ //通用
+ //首页图标
+ public static String GET_PIC_INDEX_COMMON = "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/getPicIndex";
+ //	协议、说明相关
+ //获取静态页面 协议
+ public static String GET_STATIC_URL_COMMON = "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/getStaticUrl";
+ //	获取基本状态值
+ public static String GET_BASE_VALUE_COMMON = "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/getBaseValue";
+ //      获取期权介绍
+ public static String GET_OPTION_INTRO_COMMON = "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/getOptionIntro";
+ //	我的 	获取商户类型列表
+ public static String LIST_MERCHANT_TYPE_COMMON = "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/listMerchantType";
+ //获取图形验证码图片
+ public static String GET_PICTURE_CODE_COMMON = "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/getPictureCode";
+ //	验证是否更新
+ public static String IS_VERSION_UPDATE_COMMON = "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/isVersionUpdate";
+ //获取APP启动初始数据  首页广告
+ public static String GET_APP_START_INIT_DATA_COMMON = "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/getAppStartInitData";
+ //		获取密保问题列表
+ public static String LIST_USER_QUESTION_COMMON = "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/listUserQuestion";
+ //	添加文通银行卡信息
+ public static String ADD_WINTON_BANK_CARD_COMMON = "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/addWinTonBankcard";
+ //	添加文通身份证信息
+ public static String ADD_WINTON_IDCARD_COMMON = "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/addWinTonIdcard";
+ //	我的 根据卡号获取银行卡信息
+ public static String GET_BANK_CARD_BY_CARD_NO_COMMON = "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/getBankCardByCardNo";
+ //	我的 	获取系统各银行列表
+ public static String LIST_BANK_COMMON = "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/listBank";
+ //	获取密钥  支付时候输入支付密码
+ public static String GET_TOKEN_COMMON = "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/getToken";
+ //获取身份证类型
+ public static String LIST_CERT_TYPE_COMMON = "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/listCertType";
+ //	我的 获取云付通产业列表
+ public static String GETYUNPAYSUBDOMAINLIST_COMMON = "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/getYunPaySubDomainList";
+ //	获取协议接口
+ public static String GETAGREEMENT = "http://test-user.ipaye.cn/yunpay_static/wap/common/getAgreement";
+
+
+ //地区
+ //获取省市区  通过坐标
+ public static String GET_BY_LOCATION_AREA = "http://test-user.ipaye.cn/yunpay_v2/api/v2/area/getByLocation";
+ //	我的 	获取省份列表
+ public static String LIST_PROVINCE_AREA = "http://test-user.ipaye.cn/yunpay_v2/api/v2/area/listProvince";
+ //	我的 	获取城市列表
+ public static String LIST_CITY_AREA = "http://test-user.ipaye.cn/yunpay_v2/api/v2/area/listCity";
+ //	我的 	获取区县列表
+ public static String LIST_REGION_AREA = "http://test-user.ipaye.cn/yunpay_v2/api/v2/area/listRegion";
+ //	获取城市简称列表
+ public static String LIST_CITY_SHORT_NAME = "http://test-user.ipaye.cn/yunpay_v2/api/v2/area/listCityShortName";
+
+
+ //提现
+ //	提现  生成提现账单
+ public static String ADD_WITHDRAW_BILL_WITHDRAW = "http://test-user.ipaye.cn/yunpay_v2/api/v2/withdraw/addWithdrawBill";
+ public static String ADD_WITHDRAW_BILL_WITHDRAW_V2 = "http://test-user.ipaye.cn/yunpay_v2/api/v2/withdraw/addWithdrawBillV2";
+ public static String ADD_MERCHANT_WITHDRAW_BILL_WITHDRAW_V2 = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/addWithdrawBillV2";
+ //个人  积分兑换
+ public static String ADD_PERSONAL_POINTS_CONVERT_COINS = "http://test-user.ipaye.cn/yunpay_v2/api/v2/fundcloud/integralToCloud";
+ //商户  积分兑换
+ public static String ADD_MERCHANT_POINTS_CONVERT_COINS = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/integralToCloud";
+ //合伙人  积分兑换
+ public static String ADD_PARTNER_POINTS_CONVERT_COINS = "http://test-user.ipaye.cn/yunpay_v2/api/v2/partner/integralToCloud";
+
+
+ //理财(现金)
+ //		支付订单(添加支付订单(购买基金时))  购买理财
+ public static String ADD_FUND_FUNDCASH = "http://test-user.ipaye.cn/yunpay_v2/api/v2/fundcash/addFundCash";
+ // 解锁现金理财
+ public static String CANCEL__FUNDCASH = "http://test-user.ipaye.cn/yunpay_v2/api/v2/fundcash/cancel";
+
+ //理财 (云币)
+ //		支付订单(添加支付订单(购买基金时))  购买理财  云币
+ public static String ADD_FUND_FUNDCLOUD = "http://test-user.ipaye.cn/yunpay_v2/api/v2/fundcloud/addCloudAppreciationBuy";
+ //	解锁云币理财
+ public static String CANCEL_FUNDCLOUD = "http://test-user.ipaye.cn/yunpay_v2/api/v2/fundcloud/cancel";
+ //期权
+ //     	添加期权
+ public static String ADD_OPTION_OPTION = "http://test-user.ipaye.cn/yunpay_v2/api/v2/option/optionBuy";
+
+
+ //短信验证码
+ //验证短信验证码是否正确
+ public static String IS_SMS_CORRECT_SMS = "http://test-user.ipaye.cn/yunpay_v2/api/v2/sms/isSmsCorrect";
+ //登录页验证短信验证码是否正确
+ public static String IS_SMS_CORRECT_BY_IDENTITY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/sms/isSmsCorrectByIdentity";
+ //用户注册时，发送手机验证码
+ public static String SEND_WHEN_REGIST_SMS = "http://test-user.ipaye.cn/yunpay_v2/api/v2/sms/sendWhenRegist";
+ //用户短信登录时，发送手机验证码
+ public static String SEND_WHEN_LOGIN_SMS = "http://test-user.ipaye.cn/yunpay_v2/api/v2/sms/sendWhenLogin";
+ //	根据短信类型发送验证码
+ public static String SEND_SMS_BY_USER_MOBILE_SMS = "http://test-user.ipaye.cn/yunpay_v2/api/v2/sms/sendSmsByUserMobile";
+ //	修改密码时(未登录)，发送短信验证码到绑定手机
+ public static String SEND_WHEN_REPASS_SMS = "http://test-user.ipaye.cn/yunpay_v2/api/v2/sms/sendWhenRepass";
+ //修改用户手机时，发送短信验证码到手机
+ public static String SEND_WHEN_REMOBILE_SMS = "http://test-user.ipaye.cn/yunpay_v2/api/v2/sms/sendWhenRemobile";
+ //	忘记支付密码  修改支付密码时，发送短信验证码到绑定手机
+ public static String SEND_WHEN_REPAYPWD_SMS = "http://test-user.ipaye.cn/yunpay_v2/api/v2/sms/sendWhenRepaypwd";
+ //强制同意协议
+ public static String USER_AGREEMENT_CONSENT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userAgreement/consentAgreement";
+ // 获取订单号 , 用于用户, 商户 , 合伙人  云币兑换接口
+ public static String OBTAIN_PAY_ORDER_ID = "http://test-user.ipaye.cn/yunpay_v2/api/v2/order/getOrderId";
+
+
+ //通知(紧急公告)
+ //	获取紧急公告(通知)详情
+ public static String GET_NOTICE_DETAIL_NOTICE = "http://test-user.ipaye.cn/yunpay_v2/api/v2/notice/getNoticeDetail";
+
+
+ //消息
+ //	获取系统消息详情
+ public static String GET_MSG_MSG = "http://test-user.ipaye.cn/yunpay_v2/api/v2/msg/getMsg";
+ //	获取是否有未读消息  系统、通知、充值、红包，是否有未读消息
+ public static String CNTSYSMSG_MSG = "http://test-user.ipaye.cn/yunpay_v2/api/v2/msg/cntSysMsg";
+ //	获取是否有未读消息  系统、通知、充值、红包，是否有未读消息,个数
+ public static String CNTSYSMSG_MSG_NUM = "http://test-user.ipaye.cn/yunpay_v2/api/v2/msg/cntSysMsgNum";
+ //	获取未读系统消息列表
+ public static String LIST_UNREAD_MSG = "http://test-user.ipaye.cn/yunpay_v2/api/v2/msg/listUnread";
+ //	获取红包助手消息列表
+ public static String LIST_RED_BAG = "http://test-user.ipaye.cn/yunpay_v2/api/v2/redbag/list";
+ // 删除系统消息，通知消息
+ public static String DELETE_SYS_MSG = "http://test-user.ipaye.cn/yunpay_v2/api/v2/msg/deleteMsg";
+
+
+ //用户信息
+ //	我的 获取子账号列表
+ public static String LIST_CHILD_USERINFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/listChild";
+ //	验证用户密保问题
+ public static String IS_QUESTION_CORRECT_USERINFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/isQuestionCorrect";//
+ // 修改手势密码(通过登录密码)
+ public static String RESET_GESTURE_PWD_USERINFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/resetGesturePwd";
+ //	打开/关闭手势密码
+ public static String OPEN_OR_CLOSE_GESTURE_PWD_USERINFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/openOrCloseGesturePwd";
+ //到账提示音 开关闭
+ public static String OPENGATERINGWARING_USERINFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/openGateringWaring";
+ //获取用户资料
+ public static String GET_USER_USERINFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/getUser";
+ //获取用户列表(通过用户名/昵称/手机号)
+ public static String LIST_BY_SEARCH_USERINFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/listBySearch";
+ //	获取好友头像列表
+ public static String LIST_HEAD_PIC_USERINFO = "http://test-user.ipaye.cn/yunpay_cc/userinfo/listHeadPic";
+ //	修改用户资料
+ public static String EDIT_USER_INFO_USERINFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/editUserInfo";
+ //	编辑用户地址
+ public static String EDIT_USER_ADDRESS_USERINFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/editUserAddress";
+ //	编辑用户性别
+ public static String EDIT_USER_SEX_USERINFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/editUserSex";
+ //	修改昵称
+ public static String EDIT_USER_NICKNAME_USERINFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/editUserNickName";
+ //	编辑用户邮箱
+ public static String EDIT_USER_EMAIL_USERINFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/editUserEmail";
+     //	编辑用户个性签名
+     public static String EDIT_USER_ED_SIGNATURE = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/editUserIndividualitySignature";
+
+ //		添加用户密保问题
+ public static String ADD_QUESTION_USERINFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/addQuestion";
+ //		重置用户密保问题
+ public static String RESET_QUESTION_USERINFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/resetQuestion";
+ //		获取用户密保问题
+ public static String GET_QUESTION_USERINFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/getQuestion";
+ //	实名认证
+ public static String EDIT_REALNAME_USERINFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/editRealname";
+ //	实名认证 港澳台
+ public static String EDIT_REALNAME_HMT_USERINFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/editRealnameHMT";
+ //	实名认证 人工审核
+ public static String EDIT_REALNAME_ARTIFICIAL_USERINFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/editRealnameArtificial";
+ //	账号找回 四要素认证
+ public static String RESETUSERMOBILEBYCHECKINFO_USERINFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/resetUserMobileByCheckInfo";
+ //	账号找回 重置用户手机号-检查新手机短信验证码
+ public static String RESETUSERMOBILEBYCHECKSMSCODE_USERINFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/resetUserMobileByCheckSmsCode";
+ //	账号找回 重置手机-用户支付密码认证
+ public static String RESETUSERMOBILEBYPAYPWD_USERINFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/resetUserMobileByPayPwd";
+ //	编辑用户职业
+ public static String EDIT_USER_PROFESSION = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/editUserProfession";
+ //	编辑用户星座
+ public static String EDIT_USER_CONSTELLATION= "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/editUserConstellation";
+ //	编辑用户收入
+ public static String EDIT_USER_INCOME= "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/editUserIncome";
+ //	校验账号是否为关联账号（父账号 和 子账号）
+ public static String VERIFY_RELATION= "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/verifyRelation";
+ //	获取用户职业列表
+ public static String GET_COMMON_ATTRIBUTE_LIST= "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/getUserProfessionAttributeList";
+ //	获取用户收入列表
+ public static String GET_COMMON_INCOM= "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/getUserIncomeAttributeList";
+ //	获取用户星座列表
+ public static String GET_COMMON_CONSTE= "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/getUserConstellationAttributeList";
+ //	获取银行列表
+ public static String GET_COMMON_LISTBANK= "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/listBank";
+ //	账号找回 重置用户手机时，发送短信验证码到新手机
+ public static String SENDSMSBYRESETUSERMOBILE_SMS = "http://test-user.ipaye.cn/yunpay_v2/api/v2/sms/sendSmsByResetUserMobile";
+
+
+ //优惠券
+ //		获取可用优惠券列表(付款给商户时)
+ public static String LIST_AVAILABLE_COUPON = "http://test-user.ipaye.cn/yunpay_v2/api/v2/coupon/listAvailable";
+ //		添加商家优惠券
+ public static String ADD_COUPON_COUPON = "http://test-user.ipaye.cn/yunpay_v2/api/v2/coupon/addCoupon";
+ //		获取商家优惠券列表
+ public static String LIST_COUPON_COUPON = "http://test-user.ipaye.cn/yunpay_v2/api/v2/coupon/listCoupon";
+ //		获取商家优惠券详情
+ public static String GET_COUPON_COUPON = "http://test-user.ipaye.cn/yunpay_v2/api/v2/coupon/getCoupon";
+ //		删除商家优惠券
+ public static String DELETE_COUPON_COUPON = "http://test-user.ipaye.cn/yunpay_v2/api/v2/coupon/deleteCoupon";
+
+
+ //	获取提现帐单信息
+ public static String GET_WITHDRAW_BILL_INFO_WITHDRAW = "http://test-user.ipaye.cn/yunpay_v2/api/v2/withdraw/getWithdrawBillInfo";
+ //	获取商户提现帐单信息
+ public static String GET_MERCHANT_WITHDRAW_BILL_INFO_WITHDRAW = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/getWithdrawBillInfo";
+ //	获取提现记录
+ public static String GET_WITHDRAW_BILL_LIST_WITHDRAW = "http://test-user.ipaye.cn/yunpay_v2/api/v2/withdraw/getWithdrawBillList";
+ //	获取提现记录
+ public static String GET_WITHDRAW_MERCHANT_LIST_WITHDRAW = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/getWithdrawBillList";
+ //账单(现金)
+ //获取现金账单详情(根据orderId)
+ public static String GET_BY_ORDERID_BALANCEBILL = "http://test-user.ipaye.cn/yunpay_v2/api/v2/balancebill/getByOrderId";
+
+
+ //	获取列表  下级升级合伙人、升级VIP、升级金钻获得收益
+ public static String LIST_REFERRER_BALANCEBILL = "http://test-user.ipaye.cn/yunpay_v2/api/v2/balancebill/listReferrer";
+ //	 统计下级升级的收益
+ public static String SUM_REFERRER_BALANCEBILL = "http://test-user.ipaye.cn/yunpay_v2/api/v2/balancebill/sumReferrer";
+ //	 统计下级升级的收益
+ public static String SUM_REFERRER_BALANCEBILL_AND_MEMBERNUM = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userreferrer/getReferrerInfo";
+ //	 我的推荐页面搜索推荐人下级
+     public static String LIST_REFERRER_BY_KEY_WORD= "http://test-user.ipaye.cn/yunpay_v2/api/v2/userreferrer/listUserReferrerByKeyWord";
+
+ //验证用户名是否匹配
+ public static String CHECK_USERNAME_CORRECT_USER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/user/checkUserNameCorrect";
+ //累计返现
+ public static String SUM_RETURN_BALANCEBILL = "http://test-user.ipaye.cn/yunpay_v2/api/v2/balancebill/sumReturn";
+ //获取云币账单列表 类型1所有2返现3收入4支出
+ public static String LIST_CLOUD_BALANCEBILL = "http://test-user.ipaye.cn/yunpay_v2/api/v2/cloudbill/listCloud";
+ //	获取列表 转账记录  个人
+ public static String LIST_BALANCE_BYTOLOGINNAME_BALANCEBILL = "http://test-user.ipaye.cn/yunpay_v2/api/v2/balancebill/listBillByToLoginName";
+ //	获取列表 转账记录  商家
+ public static String LIST_BALANCE_BYTOLOGINNAME_MERCHANT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/listBillByToLoginName";
+ //	个人收款记录
+ public static String LIST_BALANCE_LIST_COLLECTION_BILL_BY_LOGIN_NAME = "http://test-user.ipaye.cn/yunpay_v2/api/v2/balancebill/listCollectionBillByLoginName";
+ //	获取列表 红包记录
+ public static String GET_USER_REDBAG_LIST_REDBAG = "http://test-user.ipaye.cn/yunpay_v2/api/v2/redbag/getUserRedBagList";
+	"/balancebill/listCloud";
+
+
+ //最近转账联系人
+ //	获取列表  最近转账联系人列表
+ public static String LIST_TRANSFER_USERTRANSFER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/usertransfer/listTransfer";
+ //		删除最近转账联系人
+ public static String DELETE_TRANSFER_USERTRANSFER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/usertransfer/deleteTransfer";
+
+
+ //支付配置 支付方式+默认银行卡
+ //		 类型：1充值2普通转账3购物4升级5红包6理财7公益8云商宝9充值流量10购买云币计算器
+ public static String list_Enable_ByDefaultBankCard = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payway/listEnableByDefaultBankCard";
+ //		未完成订单继续支付
+ public static String listEnableByBankBardExternalAuth = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payway/listEnableByBankBardExternalAuth";
+ //支付方式
+ //		获取支付方式列表  类型：1充值2普通转账3购物4升级5红包6理财7公益8云商宝
+ public static String LIST_ENABLE_PAYWAY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payway/listEnable";
+ //		获取支付方式列表  买基金时
+ public static String LIST_FUND_PAYWAY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payway/listFund";
+ //		获取支付方式列表 充值时
+ public static String LIST_RECHARGE_PAYWAY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payway/listRecharge";
+ //		获取支付方式列表  转账给会员
+ public static String LIST_TRANSFER_PAYWAY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payway/listTransfer";
+ //		获取支付方式列表  转账给商户 付款给商户
+ public static String LIST_SHOPPING_PAYWAY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payway/listShopping";
+ //		获取支付方式列表  (会员升级时)
+ public static String LIST_UPGRADE_PAYWAY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payway/listUpgrade";
+ //		获取支付方式列表  红包
+ public static String LIST_REDBAG_PAYWAY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payway/listRedbag";
+ //		获取支付方式列表  公益
+ public static String LIST_PUBLIC_PAYWAY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payway/listPublic";
+
+
+ //用户开通云商保
+
+ public static String OPEN_MERCHANT_MERCHANT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/cucredit/getDetail";
+ //商户
+ //获取商户列表
+ public static String LIST_MERCHANT_MERCHANT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/listMerchant";
+ //光顾过的店
+ public static String LIST_MERCHANT_HISTORY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/listHistory";
+ //获取搜索的商户列表
+ public static String LIST_SEARCH_MERCHANT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/listSearch";
+ //	我的 商户中心  修改商户资料  手机
+ public static String EDIT_MMOBILE_MERCHANT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/editmMobile";
+ //	我的 商户中心  修改商户资料  	描述
+ public static String EDIT_DESC_MERCHANT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/editDesc";
+ //	获取最新申请商户
+ public static String GET_LATEST_MERCHANT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/getLatestMerchant";
+ //	我的 商户中心 修改商户位置
+ public static String EDIT_MERCHANT_LOCATION_MERCHANT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/editLocation";
+ //	我的 商户中心	获取商户信息(通过商户登录名或商户编码mNum)
+ public static String GET_MERCHANT_MERCHANT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/getMerchant";
+ //	云商圈	商户评价
+ public static String EVALUATE_MERCHANT_MERCHANT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/evaluateMerchant";
+ //	商户版 	获取已下架商户信息
+ public static String GET_MERCHANT_UNDERCARRIAGE_MERCHANT_INFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/mySimpleInfo";
+ //	修改商户简介
+ public static String ED_MERCHANT_BRIEF = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/editMerchantBrief";
+ //	修改商户简介
+ public static String EDIT_BRIEF = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantapply/editBrief";
+ //	验证是否显示通告
+ public static String COMMON_IS_SHOW_NOTICE = "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/isShowNotice";
+
+ //	商户评论
+ //  获取商户评论列表
+ public static String LIST_MERCHANT_COMMENT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantcomment/list";
+ //	添加商户评论
+ public static String ADD_MERCHANT_COMMENT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantcomment/add";
+ //获取商户评论详情
+ public static String GET_DETAIL_MERCHANT_COMMENT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantcomment/getDetail";
+
+ //商户收藏
+ //用户获取收藏的列表
+ public static String LIST_BY_COLLECT_MERCHANT_COLLECT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantcollect/listByCollect";
+ //添加收藏
+ public static String ADD_MERCHANT_COLLECT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantcollect/add";
+ //取消收藏
+ public static String CANCEL_MERCHANT_COLLECT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantcollect/cancel";
+ //商户获取被收藏的列表
+ public static String LIST_BY_MERCHANT_MERCHANT_COLLECT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantcollect/listByMerchant";
+ //获取收藏详情
+ public static String GET_DETAIL_MERCHANT_COLLECT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantcollect/getDetail";
+
+
+ //商户认证资料
+ //	我的 商户中心 添加商户    创建商户认证
+ public static String ADD_APPLY_MERCHANTAPPLY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantapply/addApply";
+ //	我的 商户中心 提交商户认证
+ public static String SUBMIT_APPLY_MERCHANTAPPLY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantapply/submitApply";
+ //	我的 商户中心  修改公司名称
+ public static String EDIT_MORGNAME_MERCHANTAPPLY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantapply/editmOrgName";
+ //	我的 商户中心  修改所属地区
+ public static String EDIT_AREA_MERCHANTAPPLY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantapply/editArea";
+ //	我的 商户中心  修改商户类型
+ public static String EDIT_MTYPE_MERCHANTAPPLY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantapply/editmType";
+ //	我的 商户中心  修改经营范围
+ public static String EDIT_BUSINESS_SCOPE_MERCHANTAPPLY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantapply/editBusinessScope";
+ //	我的 商户中心  修改商户简称
+ public static String EDIT_MNAME_MERCHANTAPPLY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantapply/editmName";
+ //	我的 商户中心  修改商户营业执照号码
+ public static String EDITM_LICENCE_NUM_MERCHANTAPPLY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantapply/editmLicenceNum";
+ //	我的 商户中心  修改商户开户账号
+ public static String EDITM_CARDNO_MERCHANTPERMIT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantpermit/editCardNo";
+ //	我的 商户中心  修改商户开户账号  （一般户）
+ public static String EDITM_CARDNO2_MERCHANTPERMIT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantpermit/editCardNo2";
+ //	我的 商户中心  修改商户开户支行
+ public static String EDITM_BRANCHBANKNAME_MERCHANTPERMIT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantpermit/editBranchBankName";
+ //	我的 商户中心  修改商户开户支行  （一般户）
+ public static String EDITM_BRANCHBANKNAME2_MERCHANTPERMIT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantpermit/editBranchBankName2";
+ //	修改开户银行（对公户）
+ public static String EDITM_MERCHANTPERMIT_EDITBANKNAME = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantpermit/editBankName";
+ //	修改开户银行(一般户)
+ public static String EDITM_MERCHANTPERMIT_EDITBANKNAME2 = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantpermit/editBankName2";
+
+
+ //商户对公资料
+ //	我的 商户中心 创建商户对公资料
+ public static String ADD_PERMIT_MERCHANTPERMIT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantpermit/addPermit";
+ //	我的 商户中心 提交商户对公资料
+ public static String SUBMIT_PERMIT_MERCHANTPERMIT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantpermit/submitPermit";
+ //	我的 商户中心 提交商户对公资料  一般户
+ public static String SUBMIT_PERMIT2_MERCHANTPERMIT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantpermit/submitPermit2";
+ //	商户收款记录
+ public static String LIST_MERCHANT_COLLECTION_BILL_BY_LOGIN_NAME= "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/listCollectionBillByLoginName";
+ //	获取商户相册
+ public static String GET_MERCHANT_PICTURE= "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/getMerchantPicture";
+ //	删除商户相册
+ public static String DELETE_MERCHANT_PICTURE= "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/deleteMerchantPicture";
+ //	根据账号获取最新的收款的账单
+ public static String GET_LATEST_RECEIPT_BALANCE_BILL= "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/getLatestReceiptBalanceBill";
+
+
+ //优惠券
+
+
+ //上传
+ public static String UPLOAD_UPLOAD = "http://test-user.ipaye.cn/yunpay_static/api/v2/upload/upload";
+ public static String UPLOAD_UPLOAD2 = "http://test-user.ipaye.cn/yunpay_static/api/v2/upload/upload2";
+
+
+ //公益
+ //获取公益详情(通过ID)
+ public static String GET_BY_ID_PUBLIC = "http://test-user.ipaye.cn/yunpay_v2/api/v2/public/getById";
+ //获取公益详情(通过登录名和申请ID)
+ public static String GET_BY_APPLYID_PUBLIC = "http://test-user.ipaye.cn/yunpay_v2/api/v2/public/getByApplyId";
+ //获取公益列表(进行中)
+ public static String LIST_PROCESSING_PUBLIC = "http://test-user.ipaye.cn/yunpay_v2/api/v2/public/listProcessing";
+ //获取公益列表(已完成)
+ public static String LIST_FINISHED_PUBLIC = "http://test-user.ipaye.cn/yunpay_v2/api/v2/public/listFinished";
+	//获取公益申请列表(审核成功)
+	public static String LIST_SUCCESS_PUBLIC  = BASE_URL  + "/public/listSuccess";
+
+
+ //用户公益
+ //获取用户公益列表
+ public static String LIST_JOIN_USERPUBLIC = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userpublic/listJoin";
+ public static String MY_DONATION_USERPUBLIC = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userpublic/myJoin";
+
+
+ //公益申请
+ //创建公益申请
+ public static String ADD_APPLY_PUBLICAPPLY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/publicapply/addPublicApply";
+ //获取公益申请详情
+ public static String GET_PUBLIC_PUBLICAPPLY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/publicapply/getPublic";
+ //获取公益申请列表(未审核)
+ public static String LIST_UNCHECKED_PUBLICAPPLY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/publicapply/listUnchecked";
+
+ //获取公益申请列表(审核失败)
+ public static String LIST_FAILED_PUBLICAPPLY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/publicapply/listFailed";
+
+ //获取公益申请列表(审核成功)
+ public static String LIST_SUCCESS_PUBLIC = "http://test-user.ipaye.cn/yunpay_v2/api/v2/public/listSuccess";
+
+
+ //用户推荐
+ //	我的 	获取推荐的普通会员列表
+ public static String LIST_USER_USERREFERRER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userreferrer/listUserByLev";
+ //	我的 	获取推荐的商家会员列表
+ public static String LIST_MERCHANT_USERREFERRER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userreferrer/listMerchant";
+
+
+ //银行卡
+ //我的 绑定银行卡   验证所添加所有银行卡信息
+ public static String CHECK_BANK_CARD_INFO_ADDED = "http://test-user.ipaye.cn/yunpay_v2/api/v2/bindbank/checkUserAddBankCard";
+ //我的 绑定银行卡   验证所添加的信用卡的信息
+ public static String CHECK_CREDIT_CARD_VALIDITY_ADDED = "http://test-user.ipaye.cn/yunpay_v2/api/v2/bindbank/checkCreditCardValidity";
+
+ //我的 绑定银行卡   获取手机验证码
+ public static String OBTAIN_CODE_SMS_ON_BINDBANK = "http://test-user.ipaye.cn/yunpay_v2/api/v2/sms/sendAddBinkCard";
+ //我的 绑定银行卡   通过手机验证码确认绑定普通卡
+ public static String CONFIRM_NORMAL_BINDBANK = "http://test-user.ipaye.cn/yunpay_v2/api/v2/bindbank/addNormalV2";
+ //我的 绑定银行卡   通过手机验证码确认绑定安全卡
+ public static String CONFIRM_SAFE_BINDBANK = "http://test-user.ipaye.cn/yunpay_v2/api/v2/bindbank/addReliableV2";
+ //	我的 绑定银行卡   普通卡
+ public static String ADD_NORMAL_BINDBANK = "http://test-user.ipaye.cn/yunpay_v2/api/v2/bindbank/addNormal";
+ //	我的 绑定银行卡 安全卡
+ public static String ADD_RELIABLE_BINDBANK = "http://test-user.ipaye.cn/yunpay_v2/api/v2/bindbank/addReliable";
+ //	我的 获取绑定银行卡列表
+ public static String LIST_BIND_BANK_BINDBANK = "http://test-user.ipaye.cn/yunpay_v2/api/v2/bindbank/listBindBank";
+ //	我的 获取绑定可支付银行卡列表
+ public static String LIST_FOR_PAYMENT_BINDBANK = "http://test-user.ipaye.cn/yunpay_v2/api/v2/bindbank/listForPayment";
+ //	我的 获取绑定可提现银行卡列表
+ public static String LIST_FOR_WITHDRAW_BINDBANK = "http://test-user.ipaye.cn/yunpay_v2/api/v2/bindbank/listForWithdraw";
+ //	获取默认支付的个人绑定银行卡信息
+ public static String GET_DEFAULT_BINDBANK = "http://test-user.ipaye.cn/yunpay_v2/api/v2/bindbank/getDefault";
+ //	我的	设置默认支付银行卡
+ public static String RESET_DEFAULT_FOR_PAY_BINDBANK = "http://test-user.ipaye.cn/yunpay_v2/api/v2/bindbank/resetDefaultForPay";
+ //	我的	删除绑定的银行卡 普通卡
+ public static String DELETE_NORMAL_BINDBANK = "http://test-user.ipaye.cn/yunpay_v2/api/v2/bindbank/deleteNormal";
+ //	我的	删除绑定的银行卡 安全卡
+ public static String DELETE_RELIABLE_BINDBANK = "http://test-user.ipaye.cn/yunpay_v2/api/v2/bindbank/deleteReliable";
+ //	银行卡 是否可以绑定安全卡
+ public static String IS_BIND_RELIABLE_BINDBANK = "http://test-user.ipaye.cn/yunpay_v2/api/v2/bindbank/isBindReliable";
+
+
+ //订单
+ //			支付  提交支付密码获取订单	添加支付订单(充值时) 需要银行卡
+ public static String ADD_RECHARGE_PAYORDER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payorder/addRecharge";
+
+ //	添加支付订单(转账给会员时)
+ public static String ADD_TRANSFER_PAYORDER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payorder/addTransfer";
+ //			支付  提交支付密码获取订单	添加支付订单(购物时）   需要绑定银行卡
+ public static String ADD_SHOPPING_PAYORDER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payorder/addShopping";
+ //			支付  扫码每日上线500,商户
+ public static String ADD_TRANSFER__RECEIPT_QRCODE = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payorder/addShoppingByReceiptQrcode";
+ //			支付  扫码每日上线500,个人
+ public static String ADD_TRANSFER_RECEIPT_QRCODE_USER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payorder/addTransferByReceiptQrcode";
+  //		S	支付  提交支付密码获取订单	商户转商户 添加支付订单(购物时）   需要绑定银行卡
+ public static String ADD_SHOPPING_PAYORDER_MERCHANT_2_MERCHANT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payorder/addMerchantShopping";
+ //			支付  提交支付密码获取订单	添加支付订单(升级时）   需要绑定银行卡
+ public static String ADD_UPGRADE_PAYORDER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payorder/addUpgrade";
+ //			支付    购买云币计算器
+ public static String ADD_CALCULATORORDER_PAYORDER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payorder/addCalculatorOrder";
+ //			支付	添加云商宝还款订单
+ public static String ADD_CREDIT_REFUND_PAYORDER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payorder/addCreditRefund";
+ //			支付    云商保->购买云商保商品支付
+ public static String ADD_YUNSHANGBAOPAY_PAYORDER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payorder/addYunshangbaoPayOrder";
+ //			支付  添加支付订单(其他第三方app调起云付通支付)
+ public static String ADD_SHOPPING_BYEXTERNALAUTH_PAYORDER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payorder/addShoppingByExternalAuth";
+ //	微信支付 处理订单(微信支付完成客户端回调)
+ public static String GET_RESULT_FROM_WECHAT_SYN_PAYORDER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payorder/getResultFromWechatSyn";
+ //	通过余额发  添加支付订单(捐款时)
+ public static String ADD_PUBLIC_PAYORDER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/public/addPublicOrder";
+ //			支付 充值流量   需要绑定银行卡
+ public static String ADD_FLOWORDER_PAYORDER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payorder/addFlowOrder";
+
+ //	获取已完成订单列表
+ public static String LIST_SUCCESS_PAYORDER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payorder/listSuccess";
+ //	获取未完成订单列表
+ public static String LIST_PROCESSING_PAYORDER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payorder/listProcessing";
+ //	获取已关闭订单列表
+ public static String LIST_CLOSED_PAYORDER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payorder/listClosed";
+ //删除订单 (根据订单号orderId)
+ public static String DELETEBYID_PAYORDER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payorder/deleteById";
+ //	获取订单详情
+ public static String GET_BYORDERID_PAYORDER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payorder/getByOrderId";
+
+ //	取消支付
+ public static String CANCEL_PAYORDER_PAYORDER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payorder/cancelPayOrder";
+ // 继续完成支付
+ public static String RESET_PAYWAY_PAYORDER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payorder/resetPayway";
+ //继续完成支付 订单 第三方app唤起
+ public static String RESET_PAYORDERBYEXTERNALAUTH_PAYORDER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/payorder/resetPayOrderByExternalAuth";
+
+
+ //		补单
+ public static String RESET_PAY_ORDER_SUPPLE = "http://test-user.ipaye.cn/yunpay_v2/api/v2/supple/resetPayOrder";
+
+
+ //云商宝
+
+ //商户云商宝
+ //	获取云商宝详情
+ public static String GET_DETAIL_MERCHANTCREDIT_ = "http://test-user.ipaye.cn/yunpay_credit/api/v2/merchantcredit/getDetail";
+
+ //	自动还款  获取开通自动还款状态
+ public static String GETAUTOREPAY_CUCREDIT = "http://test-user.ipaye.cn/yunpay_credit/api/v2/cucredit/getAutoRepay";
+ //	自动还款
+ public static String DOAUTOREPAY_CUCREDIT = "http://test-user.ipaye.cn/yunpay_credit/api/v2/cucredit/doAutoRepay";
+
+ //	审核释放
+ public static String MERCHANTCREDIT_APPLY_FREE = "http://test-user.ipaye.cn/yunpay_credit/api/v2/creditUser/dofree";
+
+ //商户云商宝申请
+ //	添加云商宝申请
+ public static String ADD_APPLY_MERCHANTCREDITAPPLY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantcreditapply/addApply";
+ //	获取云商宝申请详情
+ public static String GET_DETAIL_MERCHANTCREDITAPPLY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantcreditapply/getDetail";
+ //云商宝 用户帮助
+ public static String GET_MERCHANT_CREDIT_HELP = "http://test-user.ipaye.cn/yunpay_credit/api/v2/credittUserHelp/getCreditUserHelpUrl";
+
+
+ //用户云商宝
+ //	获取用户云商宝详情
+ public static String ADD_APPLY_USERCREDIT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/usercredit/addApply";
+ //	获取用户云商宝列表(审核成功)
+ public static String LIST_SUCCESS_USERCREDIT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/usercredit/listSuccess";
+
+
+ //用户云商宝申请
+ //	添加用户云商宝申请
+ public static String ADD_APPLY_USERCREDITAPPLY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/usercreditapply/addApply";
+ //	获取用户云商宝申请详情
+ public static String GET_DETAIL_USERCREDITAPPLY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/usercreditapply/getDetail";
+ //获取用户云商宝申请列表(审核失败)
+ public static String LIST_FAILED_USERCREDITAPPLY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/usercreditapply/listFailed";
+ //获取用户云商宝申请列表(审核中)
+ public static String LIST_PROCESSING_USERCREDITAPPLY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/usercreditapply/listProcessing";
+
+
+ //云粉圈
+ //信息发布操作
+ //信息发布
+ public static String PUBLISH_INFO_CLOUDCYCLE = "http://test-user.ipaye.cn/yunpay_cc/cloudCycle/publishInfo";
+ //信息删除
+ public static String REMOVE_INFO_CLOUDCYCLE = "http://test-user.ipaye.cn/yunpay_cc/cloudCycle/removeInfo";
+
+ //信息点赞操作
+ //信息点赞
+ public static String DO_CLICK_INFO_CLOUDCYCLE = "http://test-user.ipaye.cn/yunpay_cc/cloudCycle/doClickInfo";
+ //取消点赞
+ public static String CANCEL_CLICK_INFO_CLOUDCYCLE = "http://test-user.ipaye.cn/yunpay_cc/cloudCycle/cancelClickInfo";
+
+
+ //信息评论操作
+ //信息评论
+ public static String DO_DISCUSS_INFO_CLOUDCYCLE = "http://test-user.ipaye.cn/yunpay_cc/cloudCycle/doDiscussInfo";
+ //评论删除
+ public static String REMOVE_DISCUSS_INFO_CLOUDCYCLE = "http://test-user.ipaye.cn/yunpay_cc/cloudCycle/removeDiscussInfo";
+
+
+ //查询操作	//修改备注名	public static String UPDATEREMARKNAME_OFROSTER = BASE_URL_FAN  + "/ofroster/updateRemarkName";
+ //好友查询
+ public static String QUERY_OFROSTERS_OFROSTER = "http://test-user.ipaye.cn/yunpay_cc/ofroster/queryOfrosters";
+ //云粉圈动态查询—针对自己和好友
+ public static String DO_QUERY_INFOS_CLOUDCYCLE = "http://test-user.ipaye.cn/yunpay_cc/cloudCycle/doQueryInfos";
+ //单条动态信息查询
+ public static String DO_QUERY_INFO_CLOUDCYCLE = "http://test-user.ipaye.cn/yunpay_cc/cloudCycle/doQueryInfo";
+
+ //高德地图查询
+ //周边查询
+ public static String AROUND_SEARCH_MAPSEARCH = "http://test-user.ipaye.cn/yunpay_cc/mapSearch/aroundSearch";
+ //关键字查询
+ public static String KEYWORDS_SEARCH_MAPSEARCH = "http://test-user.ipaye.cn/yunpay_cc/mapSearch/keywordsSearch";
+ //附近的人
+ public static String NEARBY_SEARCH_MAPSEARCH = "http://test-user.ipaye.cn/yunpay_cc/bgParam/queryNearby";
+ //清除位置信息
+ public static String CLEAN_LOCATION = "http://test-user.ipaye.cn/yunpay_cc/bgParam/clearLocation";
+ //背景图片修改
+ public static String CHANGE_BACKGROUND = "http://test-user.ipaye.cn/yunpay_cc/bgParam/modifyBgParam";
+ //背景信息查询
+ public static String CKECKOUT_BACKGROUND = "http://test-user.ipaye.cn/yunpay_cc/bgParam/queryBgParam";
+ //好友查询
+ public static String LOOKUP_FRIENDS = "http://test-user.ipaye.cn/yunpay_cc/ofroster/queryOfrosters";
+ //好友添加
+ public static String ADDOFROSTER_FRIENDS = "http://test-user.ipaye.cn/yunpay_cc/ofroster/addOfroster";
+ //好友删除
+ public static String REMOVEOFROSTER_FRIENDS = "http://test-user.ipaye.cn/yunpay_cc/ofroster/removeOfroster";
+ //备注名更改
+ public static String UPDREMARKNAME_FRIENDS = "http://test-user.ipaye.cn/yunpay_cc/ofroster/updRemarkName";
+ //获取手机通讯录匹配云付通帐户
+ public static String MATCH_ACCOUNT_BY_PHONE_CONTACT = "http://test-user.ipaye.cn/yunpay_cc/userinfo/selectByMobile";
+ //用户发送邀请注册短信
+ public static String SEND_INVITE_REGISTER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/sms/sendInviteRegister";
+
+
+ //指纹支付
+ //设置指纹支付密码
+ public static String ADD_FINGER_PRINT_USER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/user/addFingerPrint";
+ //关闭指纹支付密码
+ public static String CLOSE_FINGER_PRINT_USER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/user/closeFingerPrint";
+
+
+ //免密支付
+ //获取免密支付额度
+ public static String PAY_AMOUNT_LIST_COMMON = "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/payAmountList";
+ //设置免密支付
+ public static String ADD_AVOID_PAY_USER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/user/addAvoidPay";
+ //关闭免密支付
+ public static String CLOSE_AVOID_PAY_USER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/user/closeAvoidPay";
+
+
+ //商户云商宝   商户中心
+ //云商宝详情
+ public static String GET_DETAIL_CREDITMERCHANT = "http://test-user.ipaye.cn/yunpay_credit/api/v2/creditmerchant/getDetail";
+ //云商宝申请
+ public static String ADD_APPLY_CREDITMERCHANTAPPLY = "http://test-user.ipaye.cn/yunpay_credit/api/v2/creditmerchant/addApply";
+ //云商宝会员列表
+ public static String LIST_APPLYS_CREDITMERCHANT = "http://test-user.ipaye.cn/yunpay_credit/api/v2/creditmerchant/listApplys";
+
+
+ //用户云商宝
+ //我的信用
+ public static String GET_DETAIL_CUCREDIT = "http://test-user.ipaye.cn/yunpay_credit/api/v2/cucredit/getDetail";
+ //我的信用 信用记录
+ public static String LIST_CREDIT_CUCREDIT = "http://test-user.ipaye.cn/yunpay_credit/api/v2/cucredit/listCredit";
+ //我的申请
+ public static String LIST_APPLYS_CREDITUSER = "http://test-user.ipaye.cn/yunpay_credit/api/v2/creditUser/listApplys";
+ //我的账单
+ public static String LIST_REPAYING_CUREPAY = "http://test-user.ipaye.cn/yunpay_credit/api/v2/creditBillDay/listMonth";
+ //我的账单 详情
+ public static String GET_DETAIL_CUREPAY = "http://test-user.ipaye.cn/yunpay_credit/api/v2/creditBillDay/listDate";
+ //我的账单  我要分期 分期列表
+ public static String LIST_INSTALMENTS_CUREPAY = "http://test-user.ipaye.cn/yunpay_credit/api/v2/curepay/listInstalments";
+ //我的账单  我要分期 分期
+ public static String APPLY_INSTALMENTS_CUREPAY = "http://test-user.ipaye.cn/yunpay_credit/api/v2/curepay/applyInstalments";
+ //我的账单  我要分期 分期
+ public static String INSTALMENTS_CUREPAY_ALL = "http://test-user.ipaye.cn/yunpay_credit/api/v2/curepay/queryInstalments";
+ //查询分期
+ public static String ALTER_INSTALMENTS_CUREPAY = "http://test-user.ipaye.cn/yunpay_credit/api/v2/curepay/listStage";
+
+ //查询分期
+ public static String INSTALMENTS_CUREPAY_DETIAL = "http://test-user.ipaye.cn/yunpay_credit/api/v2/curepay/getDetail";
+
+ //消费记录
+ public static String LIST_CONSUME_CUCONSUME = "http://test-user.ipaye.cn/yunpay_credit/api/v2/cuconsume/listConsume";
+ //还款记录
+ public static String LIST_REPAYED_CUREPAY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/curepay/listRepayed";
+ //我的账单 日账单详情
+ public static String GET_DETAIL_CUREPAY_DAY = "http://test-user.ipaye.cn/yunpay_credit/api/v2/creditBillDay/detail";
+
+ //商户授信记录
+ public static String GET_REPAYING_CUREPAY = "http://test-user.ipaye.cn/yunpay_credit/api/v2/creditUser/listCreditus";
+ //授信消费记录creditUser/detail
+ public static String GET_REPAYING_CUREPAY_DETIAL = "http://test-user.ipaye.cn/yunpay_credit/api/v2/creditUser/detail";
+ //云商圈 云商宝
+
+
+ //会员抽奖记录
+ public static String GET_CREDIT_AWARD_LIST = "http://test-user.ipaye.cn/yunpay_credit/api/v2/creditAwards/getAwards";
+ //放弃兑奖资格
+ public static String GIVEUP_CREDIT_AWARD = "http://test-user.ipaye.cn/yunpay_credit/api/v2/creditAwards/disabledAwards";
+ //云商保模式选择
+ public static String CHOOSE_MODEL_MERCHANT = "http://test-user.ipaye.cn/yunpay_credit/api/v2/creditAwards/hasUsedAwards";
+
+ //商户云商宝
+ public static String GET_DETAIL_CREDITUSER = "http://test-user.ipaye.cn/yunpay_credit/api/v2/creditUser/getDetail";
+ //商户云商宝  审核失败 重新申请
+ public static String GET_RETRY_DETAIL_CREDITUSER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/credituser/getRetryDetail";
+ //－－ 扫码， 原生页面打开
+ public static String GET_SCANNER_CAPTURE_CAMPAIGN_INFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/activity/activityMain";
+ //商户云商宝  会员申请贷款
+ public static String ADD_APPLY_CREDITUSERAPPLY = "http://test-user.ipaye.cn/yunpay_credit/api/v2/creditUser/addApply";
+ // 消息列表：
+ public static String LIST_MSG_CREDITMSG = "http://test-user.ipaye.cn/yunpay_credit/api/v2/creditmsg/listMsg";
+ // 未读消息：
+ public static String UNREAD_LIST_MSG_CREDITMSG = "http://test-user.ipaye.cn/yunpay_credit/api/v2/creditmsg/countMsg";
+
+ // 标记为已读
+ public static String READ_LIST_MSG_CREDITMSG = "http://test-user.ipaye.cn/yunpay_credit/api/v2/creditmsg/updMsgStatus";
+ //统计提醒信息  条数
+ public static String COUNTWARNERINFOS_CLOUDCYCLE = "http://test-user.ipaye.cn/yunpay_cc/cloudCycle/countWarnerInfos";
+ //提醒信息接口
+ public static String REMINDINFORMATION_CLOUDCYCLE = "http://test-user.ipaye.cn/yunpay_cc/cloudCycle/queryWarnerInfos";
+ //清除提醒信息
+ public static String CLEARWARNERINFOS_CLOUDCYCLE = "http://test-user.ipaye.cn/yunpay_cc/cloudCycle/clearWarnerInfos";
+
+
+ public static String REALESE_CLOUDCYCLE = "http://test-user.ipaye.cn/yunpay_cc/cloudCycle/clearWarnerInfos";
+ //收藏
+ //用户获取收藏商户的列表
+ public static String LISTBYUSER_MERCHANTCOLLECT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantcollect/listByUser";
+
+
+ //合伙人收益
+ //获取合伙人收益列表
+ public static String LISTBYDATE_PARTNERBILL = "http://test-user.ipaye.cn/yunpay_v2/api/v2/partnerBill/listByDate";
+ //合伙人登录
+ public static String PARTNER_LOGIN_BY_INDEPENDENT_PWD = "http://test-user.ipaye.cn/yunpay_v2/api/v2/partner/partnerLogin";
+ //合伙人信息
+ public static String PARTNER_INFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/partner/getPartner";
+ public static String RESET_PARTNER_INDEPEDENT_PWD = "http://test-user.ipaye.cn/yunpay_v2/api/v2/partner/resetLoginPwd";
+ //获取合伙人云币账单列表
+ public static String LIST_CLOUD_PARTNER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/partner/listCloud";
+ //云币资产管理  我的
+ public static String COIN_ASSET_MANAGER_PERSONAL = "http://test-user.ipaye.cn/yunpay_v2/api/v2/fundcloud/userCloudAccount";
+ //云币资产管理  商户
+ public static String COIN_ASSET_MANAGER_MERCHANT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/merchantCloudAccount";
+ //云币资产管理  合伙人
+ public static String COIN_ASSET_MANAGER_PARTNER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/partner/partnerCloudAccount";
+
+
+ //商户银行卡列表
+ public static String BANKCARD_LIST_BY_MERCHANT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/bindBankCardList";
+
+ //商户银行卡列表--商户提现
+ public static String BANKCARD_LIST_BY_MERCHANT_WITHDRAW = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/withdrawBankCardList";
+ //云智硬件
+ //通知接口
+ public static String NOTICE_COMMONNOTICE = "http://test-user.ipaye.cn/yunpay_v2/api/v2/commonNotice/notice";
+
+ //云商圈获取首页图标
+ public static String GAIN_CLOUNDCIRCLE_PICINDEX = "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/getPicIndex";
+ //云商圈动态数据
+ public static String CLOUNDCIRCLE_CHANGEDATA = "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/getMerchantIndex";
+ public static String CLOUNDCIRCLE_CLASSICSORT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/getMerchantType";
+
+ //云商圈详情猜你喜欢
+ public static String CLOUNDCIRCLE_GUESSYOULIKE = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/listRelative";
+
+ //环信
+ //群聊
+ //邀请 群成员入群 群邀约
+ public static String AUTHCGUSER_IMANAGER = "http://test-user.ipaye.cn/yunpay_cc/imanager/authCguser";
+ //邀请 群成员入群 群邀约  查询群主确认状态,
+ public static String QRYUSERSENSUER_IMANAGER = "http://test-user.ipaye.cn/yunpay_cc/imanager/qryUsersEnsuer";
+ //群邀请详情  群主确认
+ public static String QUERYAPPLYUSERS_IMANAGER = "http://test-user.ipaye.cn/yunpay_cc/imanager/queryApplyUsers";
+ //群邀请详情  群主确认操作
+ public static String UPDAPPLYINFO_IMANAGER = "http://test-user.ipaye.cn/yunpay_cc/imanager/updApplyInfo";
+ //邀请 扫描二维码进群
+ public static String QUCODECGUSERS_IMANAGER = "http://test-user.ipaye.cn/yunpay_cc/imanager/qucodeCgusers";
+ //邀请 群成员入群
+ public static String CGUSERS_IMANAGER = "http://test-user.ipaye.cn/yunpay_cc/imanager/cgusers";
+ //删除 群成员入群
+ public static String DELETECGIMSS_IMANAGER = "http://test-user.ipaye.cn/yunpay_cc/imanager/deleteCGImss";
+ //查询群组成员信息
+ public static String QUERYCGIMS_IMANAGER = "http://test-user.ipaye.cn/yunpay_cc/imanager/queryCGIms";
+
+
+ //	获取群列表  信息   查询群信息（带成员信息，带群配置信息）
+ public static String QUERYCGINFOS_IMANAGER = "http://test-user.ipaye.cn/yunpay_cc/imanager/queryCGInfos";
+ //	获取群列表  信息   查询群信息（不带成员信息）
+ public static String QUERYCGINFO_IMANAGER = "http://test-user.ipaye.cn/yunpay_cc/imanager/queryCGInfo";
+
+
+ //	建群
+ public static String ADDCGINFO_IMANAGER = "http://test-user.ipaye.cn/yunpay_cc/imanager/addCGInfo";
+ //	修改群名称
+ public static String UPDCGINFO_IMANAGER = "http://test-user.ipaye.cn/yunpay_cc/imanager/updCGInfo";
+ //	修改群昵称
+ public static String UPDCGIMS_IMANAGER = "http://test-user.ipaye.cn/yunpay_cc/imanager/updCGIms";
+
+ //	添加群组配置信息
+ public static String ADDCGCFG_IMANAGER = "http://test-user.ipaye.cn/yunpay_cc/imanager/addCGCfg";
+ //	修改群组配置信息
+ public static String UPDCGCFG_IMANAGER = "http://test-user.ipaye.cn/yunpay_cc/imanager/updCGCfg";
+ //	查询群组配置信息
+ public static String QUERYCGCFG_IMANAGER = "http://test-user.ipaye.cn/yunpay_cc/imanager/queryCGCfg";
+ //	禁言、解禁
+ public static String PROHIBITED_IMANAGER = "http://test-user.ipaye.cn/yunpay_cc/imanager/prohibited";
+ //	禁言查询
+ public static String PROHIBITEDQUERY_IMANAGER = "http://test-user.ipaye.cn/yunpay_cc/imanager/prohibitedQuery";
+ //	群主转让
+ public static String TRANSFERGROUPOWNER = "http://test-user.ipaye.cn/yunpay_cc/imanager/transferGroupOwner";
+ //	修改群公告
+ public static String EDITGROUPNOTICE = "http://test-user.ipaye.cn/yunpay_cc/imanager/editGroupNotice";
+ //	获取群公告详情
+ public static String GETGROUPNOTICE = "http://test-user.ipaye.cn/yunpay_cc/imanager/getGroupNotice";
+
+
+ //自动同意群组加群邀请
+ //	自动同意群组加群邀请 设置  群邀约确认
+ public static String MODIFYBASECTRLINFO_USERINFO = "http://test-user.ipaye.cn/yunpay_cc/userinfo/modifyBaseCtrlInfo";
+ //	自动同意群组加群邀请 查询
+ public static String GETBASECTRLINFO_USERINFO = "http://test-user.ipaye.cn/yunpay_cc/userinfo/getBaseCtrlInfo";
+
+ //	开启进群确认群主确认设置
+ public static String UPDUSERSENSUER_IMANAGER = "http://test-user.ipaye.cn/yunpay_cc/imanager/updUsersEnsuer";
+
+ //	群组举报内容信息
+ public static String REPORT_GROUNP_CONTENT = "http://test-user.ipaye.cn/yunpay_cc/accusation/listAccusation";
+ //	群组举报
+ public static String REPORT_GROUNP = "http://test-user.ipaye.cn/yunpay_cc/accusation/accusation";
+
+ //群红包
+ //	发包
+ public static String PUBLISHREDBAGG_REDBAGMG = "http://test-user.ipaye.cn/yunpay_red/redBagMg/publishRedBag";
+ //	拆包
+ public static String DOREPACKAGE_REDBAGMG = "http://test-user.ipaye.cn/yunpay_red/redBagMg/doRePackage";
+ //	查询红包领取记录
+ public static String QUERYCGREGS_REDBAGMG = "http://test-user.ipaye.cn/yunpay_red/redBagMg/queryCGRegs";
+ //	查询红包领取记录 红包助手
+ public static String GETSTATUS_REDBAGMG = "http://test-user.ipaye.cn/yunpay_v2/api/v2/redbag/getStatus";
+ //	检查红包状态/checkCgInfos  参数 loginName，redPacketId
+ public static String CHECKCGINFOS_REDBAGMG = "http://test-user.ipaye.cn/yunpay_red/redBagMg/checkCgInfos";
+
+
+ //	云商圈  搜索 关键字
+ public static String GETMERCHANTSEARCHNAME_COMMON = "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/getMerchantSearchName";
+ //	根据搜索的商户，增加被搜索次数
+ public static String ADD_MERCHANT_SEARCHNUM = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/addMerchantSearchNum";
+ //	根据当前位置ID获取最新的热门搜索商户
+ public static String GET_HOTSEARCH_MERCHANT= "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/getHotSearchMerchant";
+
+
+ //	获取OSS key
+ public static String GET_OSS_AUTH = "http://192.168.1.215:8110/yunpay_oss/auth.htm";
+
+ //	统计
+ public static String STATICUSED_USERINFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/staticUsed";
+ public static String STATICUSEDALL_USERINFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/staticUsedAll";
+
+
+ //会员升级
+ public static String MY_UPGRADE = "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/getLVInfo";
+
+ //商户申请删除图片
+ public static String MERCHANT_APPLY_DELETE_PIC = "http://test-user.ipaye.cn/yunpay_static/api/v2/upload/deleteUploadFile";
+ //获取意见反馈问题种类
+ public static String COMMON_LIST_SUGGESSION= "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/getUserSuggessionAttributeList";
+ //获取商户申请示例图片
+ public static String COMMON_GET_MERCHANT_APPLY_EXAMPLE_PICTURE= "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/getMerchantApplyExamplePicture";
+
+ //	获取列表  余额明细
+ public static String LIST_BALANCE_BYBALANCE_BALANCEBILL = "http://test-user.ipaye.cn/yunpay_v2/api/v2/balancebill/listBillByBalance";
+ //	个人收款记录
+ public static String LIST_BALANCE_LISTCOLLECTION = "http://test-user.ipaye.cn/yunpay_v2/api/v2/balancebill/listCollectionBillByLoginName";
+
+ //添加广告记录
+ public static String ADD_STATISTICS = "http://test-user.ipaye.cn/yunpay_v2/api/v2/adstatistics/addStatistics";
+ //获取授权商户信息
+ public static String OBTAIN_MERCHANT_INFO = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/getClientInfo";
+
+ //添加关注
+ public static String MY_PUBLIC_COLLECTION_DOFOLLOW_DATA = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userpublic/doFollow";
+ //修改公益申请
+ public static String UPDATEAPPLY_PUBLICAPPLY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/publicapply/updateApply";
+ //查看公益详情(修改时)
+ public static String MY_PUBLIC_COLLECTION_GETPUBLICDETAIL_PUBLICAPPLY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/publicapply/getPublicDetail";
+ //我的捐赠页面我帮助过的列表数据
+ public static String MY_PUBLIC_DONATION_HELP_DATA = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userpublic/listJoin";
+ //我的捐赠页面我关注的列表数据
+ public static String MY_PUBLIC_COLLECTION_HELP_DATA = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userpublic/listFollow";
+ //我的捐赠页面我关注的列表Item删除
+ public static String MY_PUBLIC_COLLECTION_DELETE_DATA = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userpublic/cancelFollow";
+
+ //  个人积分兑奖记录
+ public static String PERSONAL_INTEGRAL_CONVERT_LIST = "http://test-user.ipaye.cn/yunpay_v2/api/v2/fundcloud/integralConvertList";
+ //
+ public static String MERCHANT_INTEGRAL_CONVERT_LIST = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/integralConvertList";
+ //
+ public static String PARTNER_INTEGRAL_CONVERT_LIST = "http://test-user.ipaye.cn/yunpay_v2/api/v2/partner/integralConvertList";
+
+
+ //账单相关接口
+ //	获取列表  现金账单
+ public static String LIST_BALANCE_BALANCEBILL = "http://test-user.ipaye.cn/yunpay_v2/api/v2/balancebill/listBalance";
+ //获取云币账单列表
+ public static String LIST_CLOUD_CLOUDBILL = "http://test-user.ipaye.cn/yunpay_v2/api/v2/cloudbill/listCloud";
+ //获取现金账单详情
+ public static String GET_BY_ID_BALANCEBILL = "http://test-user.ipaye.cn/yunpay_v2/api/v2/balancebill/getById";
+ //获取云币账单详情
+ public static String GET_BY_ID_CLOUDBILL = "http://test-user.ipaye.cn/yunpay_v2/api/v2/cloudbill/getById";
+
+
+ //获取历史账单列表 现金账单
+ public static String LIST_BALANCE_BALANCEBILLHISTORY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/balanceBillHistory/listBalance";
+ //获取历史账单云币账单列表
+ public static String LIST_CLOUD_CLOUDBILLHISTORY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/cloudBillHistory/listCloud";
+ //获取现金账单详情
+ public static String GET_BY_ID_BALANCEBILLHISTORY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/balanceBillHistory/getById";
+ //获取云币账单详情
+ public static String GET_BY_ID_CLOUDBILLHISTORY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/cloudBillHistory/getById";
+
+
+ //获取云币账单详情
+ public static String GET_BY_ID_CLOUDBILLPARTNER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/partner/getCloudById";
+
+ //商户 获取现金账单列表
+ public static String LIST_BALANCE_MERCHANT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/listBalance";
+ //商户 获取积分账单列表
+ public static String LIST_CLOUD_MERCHANT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/listCloud";
+ //获取现金账单详情
+ public static String GETBALANCEBYID_MERCHANT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/getBalanceById";
+ //获取云币账单详情
+ public static String GETCLOUDBYID_MERCHANT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/getCloudById";
+
+ //	获取列表  历史 余额明细列表
+ public static String LISTBILLBYBALANCE_BALANCEBILLHISTORY = "http://test-user.ipaye.cn/yunpay_v2/api/v2/balanceBillHistory/listBillByBalance";
+ //	获取列表  商户 余额明细列表
+ public static String LISTBILLBYBALANCE_MERCHANT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/listBillByBalance";
+  //	实名认证 有盾实名sdk 获取用户审批信息接口
+ public static String OBTAIN_YDREALNAME_INFO = BASE_URL +"/userinfo/getYDRealnameInfo";
+     //实名认证 有盾实名sdk 提交实名结果
+ public static String SUBMIT_REALNAME_BY_YOUDUN = BASE_URL +"/userinfo/editRealnameByYouDun";
+
+
+     //积分自动兑换积分--商户
+ public static String RESET_USER_AUTOCONVERT_MERCHANT = "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/resetUserAutoConvert";
+     //积分自动兑换积分--个人
+ public static String RESET_USER_AUTOCONVERT_PERSIONAL = "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/resetUserAutoConvert";
+     //积分自动兑换积分--合伙人
+ public static String RESET_USER_AUTOCONVERT_PARTNER = "http://test-user.ipaye.cn/yunpay_v2/api/v2/partner/resetUserAutoConvert";
+     //查询积分自动兑换开关
+ public static String QUERY_USER_AUTOCONVERT_STATE = "http://test-user.ipaye.cn/yunpay_v2/api/v2/fundcloud/queryUserAutoConvertState";
+ //我要分享的--营销分销图片
+ public static String SHARE_BUSINESS_IMAGE = "http://test-user.ipaye.cn/yunpay_v2/api/v2/share/getSharePic?";
+ //意见反馈提交
+ public static String SET_ADD_SUGGSION= "http://test-user.ipaye.cn/yunpay_v2/api/v2/userSetting/addUserSuggesion";
+ //APP内授权登录
+ public static String GET_USER_OAUTH_CODE= "http://test-user.ipaye.cn/yunpay_v2/api/v2/userOauth/getCode";
+ //APP内授权支付
+ public static String ADD_PAY_DRDER_INTEGRAL_TRANSFER= "http://test-user.ipaye.cn/yunpay_v2/api/v2/payorder/addIntegralTransferByExternalAuth";
+ //APP内授权现金支付
+ public static String YUN_PAY_API_BY_EXTERNAL_AUTH= "http://test-user.ipaye.cn/yunpay_v2/api/v2/payorder/addCashTransferByExternalAuth";
+
+ //云智手表授权绑定
+ public static String ZY_WATCH_MAKKE_CONNECTION = "http://test-user.ipaye.cn/yunpay_v2/api/v2/yunzhiWatch/makeConnection";
+ //云智手表取消授权
+ public static String ZY_WATCH_REMOVE_AUTHORIZATION = "http://test-user.ipaye.cn/yunpay_v2/api/v2/yunzhiWatch/removeAuthorization";
+ //云智手表设备校验，是否是可进行通信的设备
+ public static String ZY_WATCH_WATCH_DEVICE_VERIFY= "http://test-user.ipaye.cn/yunpay_v2/api/v2/yunzhiWatch/verify";
+ //云智手表获取我的推荐码
+ public static String ZY_WATCH_GET_RECOMMENDURL_QR= "http://test-user.ipaye.cn/yunpay_v2/api/v2/yunzhiWatch/getRecommendUrl";
+ //云智手表获取账户资金详情
+ public static String ZY_WATCH_GET_FINANCIAL_DATA= "http://test-user.ipaye.cn/yunpay_v2/api/v2/yunzhiWatch/getFinancialData";
+ //云智手表获取收款二维码
+ public static String ZY_WATCH_GET_RECEIPT_QR_CODE= "http://test-user.ipaye.cn/yunpay_v2/api/v2/yunzhiWatch/getReceiptQrcode";
+ //云智手表获取付款二维码
+ public static String ZY_WATCH_GET_PAYMENT_QR_CODE= "http://test-user.ipaye.cn/yunpay_v2/api/v2/yunzhiWatch/getPaymentQrcode";
+ //云智手表设置-更改离线支付开关
+ public static String ZY_WATCH_EDIT_OFFLINE_PAYMENT_SWITCH= "http://test-user.ipaye.cn/yunpay_v2/api/v2/yunzhiWatch/editOfflinePaymentSwitch";
+ //云智手表设置-修改单日限额
+ public static String ZY_WATCH_EDIT_SINGLE_DAY_LIMIT= "http://test-user.ipaye.cn/yunpay_v2/api/v2/yunzhiWatch/editSingleDayLimit";
+ //云智手表设置-修改单笔限额
+ public static String ZY_WATCH_EDIT_SINGLE_ORDER_LIMIT= "http://test-user.ipaye.cn/yunpay_v2/api/v2/yunzhiWatch/editSingleOrderLimit";
+ //云智手表设置信息详情
+ public static String ZY_WATCH_GET_ZYWATCH_SETTING= "http://test-user.ipaye.cn/yunpay_v2/api/v2/yunzhiWatch/getApplianceRelationData";
+ //云智手表扫码收款
+ public static String ZY_WATCH_ADD_TRANSFER_BY_PAYMENT_QRCODE= "http://test-user.ipaye.cn/yunpay_v2/api/v2/payorder/addTransferByPaymentQrcode";
+ //同意协议接口
+ public static String AGREEMENT_SUERSIGN= "http://test-user.ipaye.cn/yunpay_v2/api/v2/agreement/userSign";
+ //个人中心显示活动入口
+ public static String COMMON_ISSHOWACTIVITY= "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/isShowActivity";
+ //修改店长头像
+ public static String EDIT_MANAGER_PICTURE= "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantapply/editManagerPicture";
+ //修改店长头像
+ public static String SET_MANAGER_PICTURE= "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/setManagerPicture";
+ //修改商户相册
+ public static String EDIT_PICTURES= "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantapply/editPictures";
+ //修改商户联系电话
+ public static String EDIT_MOBILE= "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantapply/editMobile";
+ //修改商户地理位置信息
+ public static String EDIT_LOCATION= "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantapply/editLocation";
+ //获取个人中心菜单
+ public static String GET_PERSONAL_MENU= "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/getPersonalMenu";
+ //获取广告位图片
+ public static String GET_ADLIST= "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/getAdList";
+ //设置相册封面
+ public static String SET_PICTURE_COVER= "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/setPictureCover";
+ //获取商家地域订单量排行榜
+ public static String GET_AREA_MERCHANT_ORDER_NUM= "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchant/getAreaMerchantOrderNum";
+ //统计广告位点击量
+ public static String STATISTICS_AD_PLACES_HITS= "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/statisticsAdPlacesHits";
+ //获取云宝信息
+ public static String GET_YUN_BAO_DETAIL= "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/getYunBaoDetail";
+ //获取用户服务官信息
+ public static String GET_SERVICE_OFFICER= "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/getServiceOfficer";
+ //获取用户服务官信息列表
+ public static String GET_SERVICE_LIST= "http://test-user.ipaye.cn/yunpay_v2/api/v2/userinfo/getServiceList";
+ //获取任务分账单列表
+ public static String TASK_INTEGRALS_BILL= "http://test-user.ipaye.cn/yunpay_v2/api/v2/taskIntegralsBill/listBill";
+ //获取待发任务分记录
+ public static String LIST_FREEZE_BILL= "http://test-user.ipaye.cn/yunpay_v2/api/v2/taskIntegralsBill/listFreezeBill";
+ //修改商户服务官
+ public static String EDIT_SERVICE_LOGIN_NAME= "http://test-user.ipaye.cn/yunpay_v2/api/v2/merchantapply/editServiceLoginName";
+ //根据code获取转账说明规则
+ public static String GET_TRANSFER_STATE_BY_CODE= "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/getTransferStateByCode";
+ //获取缓存系统公告
+ public static String GET_CACHE_SYSTEM_MSG= "http://test-user.ipaye.cn/yunpay_v2/api/v2/common/getCacheSystemMsg";

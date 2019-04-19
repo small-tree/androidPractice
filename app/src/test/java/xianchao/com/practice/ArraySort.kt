@@ -24,4 +24,39 @@ object ArraySort {
         }
     }
 
+
+    fun quickSork(array: Array<Int>) {
+
+        println(Arrays.toString(array))
+        var pivot = array[0]
+        var start = 1
+        var end = array.size - 1
+        while (start < end) {
+            while (start < end && pivot <= array[end]) {
+                end--
+            }
+            if (pivot >= array[end]){
+                var temp = array[end]
+                array[end] = pivot
+                pivot = temp
+            }
+
+            while (start <end && pivot >= array[start]){
+                start ++
+            }
+
+            if (pivot <= array[start]){
+                var temp = array[start]
+                array[start] = pivot
+            }
+
+
+        }
+
+
+        println(Arrays.toString(array))
+
+    }
+
+
 }

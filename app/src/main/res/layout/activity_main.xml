@@ -9,6 +9,11 @@
     tools:context=".MainActivity">
 
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
 
     <Button
         android:id="@+id/btn_job_service"
@@ -41,5 +46,36 @@
         android:layout_height="wrap_content"
         android:text="ArchitectureComponents"
         android:textAllCaps="false" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/aaaa">
+
+
+        <TextView
+            android:id="@+id/tv_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CENTER"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bellow"
+            android:layout_alignLeft="@+id/tv_center"
+            android:layout_below="@+id/tv_center"/>
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
 
 </LinearLayout>

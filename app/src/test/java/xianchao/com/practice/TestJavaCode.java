@@ -10,19 +10,55 @@ public class TestJavaCode {
     public static void test() {
 
         System.out.println(Arrays.toString(hexToByte("168518")));
-        System.out.println((byte)0x85);
+        System.out.println((byte) 0x85);
 
         System.out.println(Arrays.toString(hexToByte("ffffffffffffffffffffffff0401ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff500018738118000001F4004C4B40000000003C0000000000FFFFFFFFFFFFFFFFFFFF000000BE37746501FC103200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF290342FFFFFFFFFFFFFFFFFFFFFF0401")));
         System.out.println(Arrays.toString(decodeHex("ffffffffffffffffffffffff0401ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff500018738118000001F4004C4B40000000003C0000000000FFFFFFFFFFFFFFFFFFFF000000BE37746501FC103200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF290342FFFFFFFFFFFFFFFFFFFFFF0401")));
         System.out.println(Arrays.toString(hexToByteArray("ffffffffffffffffffffffff0401ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff500018738118000001F4004C4B40000000003C0000000000FFFFFFFFFFFFFFFFFFFF000000BE37746501FC103200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF290342FFFFFFFFFFFFFFFFFFFFFF0401")));
     }
 
+    public static void quitSort(int arr[], int low, int high) {
+        int start = low;
+        int end = high;
+        int key = arr[low];
+        System.out.println(Arrays.toString(arr));
+
+        while(start < end) {
+            while(end > start && key <= arr[end]) {
+                end --;
+            }
+            if(key >= arr[end]) {
+                int temp = arr[end];
+                arr[end] = arr[start];
+                arr[start] = temp;
+            }
+
+            while(start < end && arr[start] <= key) {
+                start ++;
+            }
+            if(arr[start] >= key) {
+                int temp = arr[start];
+                arr[start] = arr[end];
+                arr[end] = temp;
+            }
+        }
+
+        if(start > low) {
+            quitSort(arr, low, start-1);
+        }
+        if(end < high) {
+            quitSort(arr, end+1, high);
+        }
+    }
+
+
     /**
      * hex转byte数组
+     *
      * @param hex
      * @return
      */
-    public static byte[] hexToByte(String hex){
+    public static byte[] hexToByte(String hex) {
         int m = 0, n = 0;
         int byteLen = hex.length() / 2; // 每两个字符描述一个字节
         byte[] ret = new byte[byteLen];
@@ -30,11 +66,10 @@ public class TestJavaCode {
             m = i * 2 + 1;
             n = m + 1;
             int intVal = Integer.decode("0x" + hex.substring(i * 2, m) + hex.substring(m, n));
-            ret[i] = Byte.valueOf((byte)intVal);
+            ret[i] = Byte.valueOf((byte) intVal);
         }
         return ret;
     }
-
 
 
     private static final byte[] DIGITS = new byte['f' + 1];
@@ -89,8 +124,9 @@ public class TestJavaCode {
 
     /**
      * hex字符串转byte数组
+     *
      * @param inHex 待转换的Hex字符串
-     * @return  转换后的byte数组结果
+     * @return 转换后的byte数组结果
      */
     public static byte[] hexToByteArray(String inHex) {
         int hexlen = inHex.length();
@@ -116,11 +152,12 @@ public class TestJavaCode {
 
     /**
      * Hex字符串转byte
+     *
      * @param inHex 待转换的Hex字符串
-     * @return  转换后的byte
+     * @return 转换后的byte
      */
-    public static byte hexToByte1(String inHex){
-        return (byte)Integer.parseInt(inHex,16);
+    public static byte hexToByte1(String inHex) {
+        return (byte) Integer.parseInt(inHex, 16);
     }
 
 }
