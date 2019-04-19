@@ -1,20 +1,9 @@
 package xianchao.com.practice
 
-import android.Manifest
-import android.app.Service
-import android.app.job.JobInfo
-import android.app.job.JobScheduler
-import android.app.job.JobService
-import android.content.ComponentName
-import android.content.Intent
 import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Message
-import android.os.Messenger
 import android.support.annotation.RequiresApi
-import android.support.v4.app.ActivityCompat
-import android.support.v4.content.ContextCompat
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import android.view.ViewGroup
@@ -27,12 +16,9 @@ import xianchao.com.basiclib.extension.extStartActivity
 import xianchao.com.practice.ArchitectureComponents.ArchitecturePracticeActivity
 import xianchao.com.practice.alarmManager.PracticeAlarmActivity
 import xianchao.com.practice.jobscheduler.JobSchedulerActivity
-import xianchao.com.practice.jobscheduler.PracticeJobService
 import xianchao.com.practice.socket.SocketPracticeActivity
 import xianchao.com.practice.view.TestViewActivity
 import xianchao.com.practice.workmanager.WorkManagerActivity
-import java.util.logging.Handler
-import java.util.logging.LogManager
 
 
 class WithParentClickListener(val onClickListener: View.OnClickListener) : View.OnClickListener {
@@ -70,9 +56,12 @@ class MainActivity : AppCompatActivity() {
         popupWindow = PopupWindow(this)
 
         rv_recyclerview.layoutManager = LinearLayoutManager(this)
-        var adapter = ListPageAdapter()
-        rv_recyclerview.adapter = adapter
-        adapter.setNewData(itemDatas)
+        var pageAdapter = ListPageAdapter()
+        rv_recyclerview.adapter = pageAdapter
+        pageAdapter.setNewData(itemDatas)
+        pageAdapter.setOnItemClickListener { adapter, view, position ->
+            pageAdapter.getItem(position)!!.action()
+        }
     }
 
     class ListPageAdapter : BaseQuickAdapter<ItemData, BaseViewHolder>(R.layout.item_home_page) {
