@@ -16,6 +16,7 @@ import xianchao.com.basiclib.extension.extStartActivity
 import xianchao.com.practice.ArchitectureComponents.ArchitecturePracticeActivity
 import xianchao.com.practice.alarmManager.PracticeAlarmActivity
 import xianchao.com.practice.jobscheduler.JobSchedulerActivity
+import xianchao.com.practice.processConnect.ServiceTestActivity
 import xianchao.com.practice.socket.SocketPracticeActivity
 import xianchao.com.practice.view.TestViewActivity
 import xianchao.com.practice.workmanager.WorkManagerActivity
@@ -44,7 +45,8 @@ class MainActivity : AppCompatActivity() {
                 ItemData("workManager") { extStartActivity(WorkManagerActivity::class.java) },
                 ItemData("socket") { extStartActivity(SocketPracticeActivity::class.java) },
                 ItemData("ArchitectureComponents") { extStartActivity(ArchitecturePracticeActivity::class.java) },
-                ItemData("testView") { extStartActivity(TestViewActivity::class.java) }
+                ItemData("testView") { extStartActivity(TestViewActivity::class.java) },
+                ItemData("ServiceTestActivity") { extStartActivity(ServiceTestActivity::class.java) }
         )
     }
 
