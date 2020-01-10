@@ -6,6 +6,7 @@
     <uses-permission
         android:name="android.permission.BIND_JOB_SERVICE"
         tools:ignore="ProtectedPermissions" />
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -13,8 +14,10 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:theme="@style/AppTheme">
-        <activity android:name=".processConnect.ServiceTestActivity"></activity>
+        <activity android:name=".exploreRetrofit.RetrofitActivity"></activity>
+        <activity android:name=".processConnect.ServiceTestActivity" />
         <activity android:name=".view.TestViewActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -27,8 +30,8 @@
 
         <service
             android:name=".processConnect.CommunicationService"
-            android:process=".test"
-            android:permission="android.permission.BIND_JOB_SERVICE" />
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=".test" />
         <service
             android:name=".jobscheduler.PracticeJobService"
             android:permission="android.permission.BIND_JOB_SERVICE" />

@@ -6,11 +6,11 @@ import android.app.job.JobScheduler
 import android.content.ComponentName
 import android.content.Context
 import android.os.Build
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_job_scheduler.*
 import xianchao.com.basiclib.utils.checkIsEmpty
 import xianchao.com.basiclib.utils.checkNotEmpty

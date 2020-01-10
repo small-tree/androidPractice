@@ -2,11 +2,11 @@ package xianchao.com.basiclib.widget
 
 import android.content.Context
 import android.graphics.drawable.Drawable
-import android.support.v4.view.ViewPager
 import android.util.AttributeSet
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
+import androidx.viewpager.widget.ViewPager
 
 class BgViewPager : ViewPager {
     constructor(context: Context) : super(context) {}

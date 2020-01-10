@@ -6,8 +6,8 @@ import android.content.Intent
 import android.content.res.Configuration
 import android.os.Build
 import android.os.Handler
-import android.support.annotation.RequiresApi
 import android.util.Log
+import androidx.annotation.RequiresApi
 import xianchao.com.practice.LOG_TAG
 import xianchao.com.practice.jobscheduler.JobSchedulerActivity.Companion.consoleLog
 import java.io.FileDescriptor

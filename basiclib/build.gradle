@@ -12,7 +12,6 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
 
@@ -28,18 +27,18 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    api 'com.squareup.retrofit2:converter-gson:2.1.0'
+    api 'com.squareup.retrofit2:converter-gson:2.7.1'
     api 'com.github.tbruyelle:rxpermissions:0.10.2'
     api 'com.github.hackware1993:MagicIndicator:1.6.0'
     //pull to refresh
     api 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-7'
     api 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.4-7'
-    api 'com.android.support:recyclerview-v7:28.0.0'
+//    api 'com.android.support:recyclerview-v7:28.0.0'
     api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.35'
 }
 repositories {

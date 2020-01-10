@@ -1,11 +1,8 @@
 package xianchao.com.practice.workmanager
 
-import android.view.View
-import android.view.ViewGroup
 import androidx.work.Data
 import androidx.work.WorkRequest
 import androidx.work.Worker
-import io.reactivex.Scheduler
 import xianchao.com.basiclib.utils.checkIsEmpty
 import java.lang.StringBuilder
 

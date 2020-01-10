@@ -1,11 +1,10 @@
 package xianchao.com.practice.workmanager
 
 import android.app.Activity
-import android.arch.lifecycle.Observer
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.work.*
 import kotlinx.android.synthetic.main.activity_work_manager.*
 import xianchao.com.practice.R
@@ -45,15 +44,15 @@ class WorkManagerActivity : AppCompatActivity() {
             consoleLog("create OneTimeWorkRequest")
             consoleLog("work enqueue")
 
-            WorkManager.getInstance().getStatusById(build.getId())//通过workRequest的id获取
-                    .observe(this, object : Observer<WorkStatus> {
-                        override fun onChanged(t: WorkStatus?) {
-                            var data = t?.getOutputData()?.getString(WORKER_RESULT, "");
-
-                            consoleLog("getOutputData:" + data)
-                        }
-
-                    })
+//            WorkManager.getInstance().getStatusById(build.getId())//通过workRequest的id获取
+//                    .observe(this, object : Observer<WorkStatus> {
+//                        override fun onChanged(t: WorkStatus?) {
+//                            var data = t?.getOutputData()?.getString(WORKER_RESULT, "");
+//
+//                            consoleLog("getOutputData:" + data)
+//                        }
+//
+//                    })
 
             WorkManager.getInstance().enqueue(build)
 //            var workContinuation1 = WorkManager.getInstance().beginWith(work1)

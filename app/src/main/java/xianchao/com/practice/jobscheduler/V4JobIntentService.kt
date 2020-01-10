@@ -1,9 +1,9 @@
 package xianchao.com.practice.jobscheduler
 
 import android.content.Intent
-import android.support.v4.app.JobIntentService
+import androidx.core.app.JobIntentService
 
-class V4JobIntentService : JobIntentService{
+class V4JobIntentService : JobIntentService {
     constructor() : super()
 
     override fun onHandleWork(p0: Intent) {

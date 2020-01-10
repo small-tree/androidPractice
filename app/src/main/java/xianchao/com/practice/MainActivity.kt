@@ -1,20 +1,21 @@
 package xianchao.com.practice
 
 import android.os.Build
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.annotation.RequiresApi
-import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import android.view.ViewGroup
 import android.widget.PopupWindow
 import android.widget.TextView
+import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
 import kotlinx.android.synthetic.main.activity_main.*
 import xianchao.com.basiclib.extension.extStartActivity
 import xianchao.com.practice.ArchitectureComponents.ArchitecturePracticeActivity
 import xianchao.com.practice.alarmManager.PracticeAlarmActivity
+import xianchao.com.practice.exploreRetrofit.RetrofitActivity
 import xianchao.com.practice.jobscheduler.JobSchedulerActivity
 import xianchao.com.practice.processConnect.ServiceTestActivity
 import xianchao.com.practice.socket.SocketPracticeActivity
@@ -46,7 +47,8 @@ class MainActivity : AppCompatActivity() {
                 ItemData("socket") { extStartActivity(SocketPracticeActivity::class.java) },
                 ItemData("ArchitectureComponents") { extStartActivity(ArchitecturePracticeActivity::class.java) },
                 ItemData("testView") { extStartActivity(TestViewActivity::class.java) },
-                ItemData("ServiceTestActivity") { extStartActivity(ServiceTestActivity::class.java) }
+                ItemData("ServiceTestActivity") { extStartActivity(ServiceTestActivity::class.java) },
+                ItemData("RetrofitActivity") { extStartActivity(RetrofitActivity::class.java) }
         )
     }
 

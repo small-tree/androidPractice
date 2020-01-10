@@ -1,8 +1,7 @@
 package xianchao.com.practice.ArchitectureComponents.liveData
 
-import android.arch.lifecycle.LiveData
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModel
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 
 class PageViewModel : ViewModel {
     public val pageViewData: MutableLiveData<PageViewData> by lazy { MutableLiveData<PageViewData>() }

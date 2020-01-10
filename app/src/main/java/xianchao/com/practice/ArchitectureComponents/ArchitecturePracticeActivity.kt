@@ -1,10 +1,8 @@
 package xianchao.com.practice.ArchitectureComponents
 
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.MutableLiveData
 import kotlinx.android.synthetic.main.activity_architecture_practice.*
 import xianchao.com.basiclib.extension.extStartActivity
 import xianchao.com.practice.ArchitectureComponents.liveData.PageViewModel
@@ -26,10 +24,10 @@ class ArchitecturePracticeActivity : AppCompatActivity() {
         pageViewData = createPageViewData()
 
 
-        pageViewData.observe(this, Observer<PageViewModel.PageViewData> {
-            // update UI
-            tv_lifecycle.text = it?.lifecycle
-        })
+//        pageViewData.observe(this, Observer<PageViewModel.PageViewData> {
+//            // update UI
+//            tv_lifecycle.text = it?.lifecycle
+//        })
 
     }
 

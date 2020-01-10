@@ -1,12 +1,12 @@
 package xianchao.com.practice.socket
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.text.style.ClickableSpan
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_socket_practice.*
 import showToast
 import xianchao.com.basiclib.utils.checkIsEmpty
