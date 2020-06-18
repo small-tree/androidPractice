@@ -1,1 +1,3 @@
 include ':app', ':libwidget',":basiclib"
+include ':kotlintest'
+include ':test'

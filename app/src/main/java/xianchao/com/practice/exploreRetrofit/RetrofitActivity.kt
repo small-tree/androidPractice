@@ -13,6 +13,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import xianchao.com.practice.R
+import java.net.HttpURLConnection
 import java.util.ArrayList
 
 
